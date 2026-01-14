@@ -13,7 +13,7 @@ export default function ButtonCards({ img, alt, onClick, className }) {
      className
     )}
    >
-    <Image src={img} alt={alt} />
+    <Image src={img} alt={alt} className="aspect-video object-cover" />
    </div>
   </motion.div>
  );
