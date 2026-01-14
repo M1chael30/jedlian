@@ -4,6 +4,7 @@ export default function MissionVision() {
   return (
     <section className="w-full mx-auto max-w-6xl">
         <CorporateGovernanceHeader/>
+        <MissionVision/>
     </section>
   )
 }
