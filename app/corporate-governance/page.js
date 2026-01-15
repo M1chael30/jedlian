@@ -1,5 +1,5 @@
-import CorporateValues from "@/components/components-corporate-values/corporate-values";
-import MissionVision from "@/components/components-mission-vision/mission-vision";
+import CorporateValues from "@/components/components-corporate-values-section/corporate-values";
+import MissionVision from "@/components/components-mission-vision-section/mission-vision";
 
 export default function CorporateGovernance() {
  return (

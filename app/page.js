@@ -1,8 +1,8 @@
 import Image from "next/image";
 import HomePageImage from "../public/images/home-page-image.png";
-import JedlianBusinessesSection from "@/components/components-jedlian-businesses/jedlian-businesses-section";
+import JedlianBusinessesSection from "@/components/components-jedlian-businesses-section/jedlian-businesses-section";
 import HomeStatsSection from "@/components/home-stats-section";
-import CorporateResponsibilitySection from "@/components/components-corporate-responsibility/corporate-responsibility-section";
+import CorporateResponsibilitySection from "@/components/components-corporate-responsibility-section/corporate-responsibility-section";
 
 export default function Home() {
  return (
