@@ -6,7 +6,7 @@ import Navlink from "../nav-link";
 
 export default function FooterBottomSection() {
  return (
-  <section className="flex md:justify-around items-center px-3 flex-col md:flex-row ">
+  <section className="flex md:justify-around items-center px-3 flex-col md:flex-row w-full max-w-7xl mx-auto">
    <div className="flex items-center gap-3 flex-col md:flex-row">
     <ul className="flex space-x-3 text-2xl text-muted-foreground">
      <li>

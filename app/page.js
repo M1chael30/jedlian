@@ -1,9 +1,11 @@
 import { EmptyComponent } from "@/components/empty-component";
 import { Rocket } from "lucide-react";
+
 import Image from "next/image";
 import HomePageImage from "../public/images/home-page-image.png";
 import JedlianCommunicationsSection from "@/components/components-jedlian-communication-section/jedlian-communications-section";
 import HomeStatsSection from "@/components/home-stats-section";
+import CorporateResponsibilitySection from "@/components/components-corporate-responsibility/corporate-responsibility-section";
 
 export default function Home() {
  return (
@@ -18,8 +20,9 @@ export default function Home() {
     alt="Jedlian landing page image"
     className="w-full"
    />
-   <HomeStatsSection/>
+   <HomeStatsSection />
    <JedlianCommunicationsSection />
+   <CorporateResponsibilitySection />
   </>
  );
 }

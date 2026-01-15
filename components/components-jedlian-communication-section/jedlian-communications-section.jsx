@@ -4,18 +4,20 @@ import { motion } from "framer-motion";
 import { containerVariants } from "@/lib/animations";
 import ButtonCards from "./button-cards";
 import ContentSection from "./content-section";
-import { jedlianCommucnicationSectionButtons } from "@/lib/data";
+import { jedlianCommucnicationSectionData } from "@/lib/data";
 import { useState } from "react";
 
 export default function JedlianCommunicationsSection() {
  const [activeIndex, setActiveIndex] = useState(0);
- const activeItem = jedlianCommucnicationSectionButtons[activeIndex];
+ const activeItem = jedlianCommucnicationSectionData[activeIndex];
 
  return (
-  <div className="p-5 space-y-4">
+  <div className="p-5 space-y-8 my-20">
    {/* content */}
 
-   <ContentSection item={activeItem} />
+   <div>
+    <ContentSection item={activeItem} />
+   </div>
 
    {/* buttons with logo clickable */}
    <motion.div
@@ -23,9 +25,9 @@ export default function JedlianCommunicationsSection() {
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.2 }}
-    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
+    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 w-full mx-auto max-w-7xl"
    >
-    {jedlianCommucnicationSectionButtons.map((button, index) => (
+    {jedlianCommucnicationSectionData.map((button, index) => (
      <ButtonCards
       className={index === activeIndex && "border-2 border-[#EFBF04]"}
       onClick={() => setActiveIndex(index)}
