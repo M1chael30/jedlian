@@ -10,7 +10,6 @@ export default function CorporateGovernanceHeader() {
       ">Corporate Governance</h1>
       </div>
       <div className="w-40 h-40 ">
-
       </div>
     </div>
   )
