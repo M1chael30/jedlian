@@ -3,7 +3,7 @@ import ContentSection from "@/components/components-about-us-page/content-sectio
 
 export default function AboutUs() {
  return (
-  <section className="p-5 max-w-7xl w-full mx-auto">
+  <section className="max-w-7xl w-full mx-auto">
    <TopSection />
    <ContentSection />
   </section>
