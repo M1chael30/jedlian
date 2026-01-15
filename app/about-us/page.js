@@ -1,15 +1,11 @@
-import { EmptyComponent } from "@/components/empty-component";
-import { Rocket } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
+import TopSection from "@/components/components-about-us-page/top-section";
+import ContentSection from "@/components/components-about-us-page/content-section";
 
 export default function AboutUs() {
  return (
-  <EmptyComponent
-   emptyMediaIcon={<Rocket className="animate-bounce" />}
-   emptyTitle="Page Under Development"
-   emptyDescription="This page is currently under development. Please check back soon."
-   emptyContentTitle="Go back home"
-   emptyContentIcon={<ArrowLeft />}
-  />
+  <section className="p-5 max-w-7xl w-full mx-auto">
+   <TopSection />
+   <ContentSection />
+  </section>
  );
 }
