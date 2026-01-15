@@ -7,11 +7,13 @@ import CorporateResponsibilitySection from "@/components/components-corporate-re
 export default function Home() {
  return (
   <>
-   <Image
-    src={HomePageImage}
-    alt="Jedlian landing page image"
-    className="w-full"
-   />
+   <div className="w-full mx-auto max-w-7xl">
+    <Image
+     src={HomePageImage}
+     alt="Jedlian landing page image"
+     className="w-full h-auto max-w-full object-contain"
+    />
+   </div>
    <HomeStatsSection />
    <JedlianBusinessesSection />
    <CorporateResponsibilitySection />

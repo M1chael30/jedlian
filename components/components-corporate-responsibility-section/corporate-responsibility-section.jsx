@@ -18,7 +18,7 @@ export default function CorporateResponsibilitySection() {
    initial="hidden"
    whileInView="show"
    viewport={{ once: true, amount: 0.3 }}
-   className="relative flex items-center overflow-hidden p-10 md:p-20"
+   className="relative flex items-center overflow-hidden p-10 md:p-20 w-full max-w-7xl mx-auto"
   >
    {/* background image */}
    <Image
@@ -30,7 +30,7 @@ export default function CorporateResponsibilitySection() {
    />
 
    {/* content */}
-   <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto gap-14">
+   <div className="relative z-10 flex flex-col md:flex-row gap-14">
     {/* left section */}
     <div className="space-y-4 w-full md:w-1/2">
      <motion.h1

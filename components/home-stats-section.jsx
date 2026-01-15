@@ -7,9 +7,9 @@ import BgCasa from "@/public/images/bg-casa-jedliana.png";
 
 export default function HomeStatsSection() {
  return (
-  <section className="relative flex flex-col items-center bg-zinc-900 space-y-8 px-10 py-14 overflow-hidden">
+  <section className="relative flex flex-col items-center bg-zinc-900 space-y-8 px-10 py-14 overflow-hidden w-full mx-auto max-w-7xl">
    {/* background image */}
-   <Image 
+   <Image
     src={BgCasa}
     alt="Casa Jedliana Background"
     fill
