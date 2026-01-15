@@ -12,12 +12,8 @@ export default function MissionVisionWidget({
         relative overflow-hidden
         flex flex-col gap-4 sm:gap-6
         justify-center items-center
-
         rounded-3xl sm:rounded-4xl
-        p-6 sm:p-8 lg:p-10
-
-        w-full sm:w-96 lg:w-120
-        min-h-[18rem] sm:min-h-[20rem]
+        p-10 w-full h-80 lg:w-full
 
         text-black border-white border-2
         ${customClassName}
