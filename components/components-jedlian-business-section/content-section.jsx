@@ -7,32 +7,32 @@ export default function ContentSection({ item }) {
    <div className="space-y-2">
     {/* title */}
     <h1 className="font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-xl md:text-4xl">
-     {item.title}
+     {item?.title}
     </h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item.descriptionTwo}</p>
+    <p className="text-xs md:text-sm">{item?.descriptionTwo}</p>
    </div>
    {/* mid section */}
    <div className="space-y-2">
     {/* title */}
     <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
-     {item.titleTwo}
+     {item?.titleTwo}
     </h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item.descriptionThree}</p>
+    <p className="text-xs md:text-sm">{item?.descriptionThree}</p>
    </div>
    {/* bottom section */}
    <div className="space-y-2">
     {/* title */}
     <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
-     {item.titleThree}
+     {item?.titleThree}
     </h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item.descriptionFour}</p>
+    <p className="text-xs md:text-sm">{item?.descriptionFour}</p>
    </div>
    {/* icon */}
    <div className="flex space-x-4">
-    {item.icon &&
+    {item?.icon &&
      item.icon.map((Icon, index) => (
       <Link href={"#"} key={index}>
        <Icon size={32} />
