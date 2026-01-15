@@ -1,3 +1,4 @@
+import CodeOfConduct from "@/components/components-code-of-conduct/code-of-conduct";
 import CorporateValues from "@/components/components-corporate-values/corporate-values";
 import MissionVision from "@/components/components-mission-vision/mission-vision";
 import CorporateGovernanceHeader from "@/components/corporate-governance-header";
@@ -8,6 +9,7 @@ export default function CorporateGovernance() {
       <CorporateGovernanceHeader/>
       <MissionVision/>
        <CorporateValues/> 
+       <CodeOfConduct/>
     </div>
  );
 }
