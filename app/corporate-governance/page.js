@@ -5,11 +5,11 @@ import CorporateGovernanceHeader from "@/components/corporate-governance-header"
 
 export default function CorporateGovernance() {
  return (
-  <div className="flex flex-col justify-center items-center p-10">
+  <div className="flex flex-col justify-center items-center p-5 mx-auto max-w-7xl w-full">
    <CorporateGovernanceHeader />
    <MissionVision />
    <CorporateValues />
-   <CodeOfConduct />
+   {/* <CodeOfConduct /> */}
   </div>
  );
 }
