@@ -14,10 +14,8 @@ export default function MissionVision() {
       />
       <MissionVisionWidget title={missionVisionData[1].title}
         description={missionVisionData[1].description}
-        customClassName={"bg-amber-300"} type="vison"
+        customClassName={"bg-amber-300"} type="vision"
       />
-
-
     </section>
   )
 }
