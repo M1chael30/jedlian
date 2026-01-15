@@ -9,8 +9,7 @@ export default function CustomButton({
   <button
    className="
         relative overflow-hidden
-        border border-[#EFBF04]
-        px-4.5 pt-4.5 pb-4.25
+        border border-[#EFBF04] p-3.5
         text-[15px] leading-3.75
         cursor-pointer
         group text-[#EFBF04]
