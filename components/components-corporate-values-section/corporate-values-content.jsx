@@ -1,40 +1,52 @@
 import CorporateValuesTitle from "./corporate-values-title";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState, useLayoutEffect } from "react";
 
 export default function CorporateValuesContent({ objects, item, expand }) {
   return (
-    <div className="h-50">
-      {objects.map((obj, index) => (
-        <div key={index} className="w-50">
-          <AnimatePresence>
-            <motion.div>
+    <motion.div className="flex flex-col gap-2">
+      {objects.map((obj, index) => {
+        const isActive = item.id === index && expand;
+        const contentRef = useRef(null);
+        const [measuredHeight, setMeasuredHeight] = useState(0);
+        useLayoutEffect(() => {
+          if (contentRef.current) {
+            setMeasuredHeight(contentRef.current.scrollHeight);
+          }
+        }, [isActive, item.description]);
+
+        return (
+          <motion.div key={index} className="w-80" layout="position">
+            <motion.div layout>
               <CorporateValuesTitle
                 customClassName={
-                  item.id === index && expand
-                    ? "underline font-bold text-amber-400"
-                    : "text-yellow-600"
+                  isActive
+                    ? "underline font-bold text-yellow-200"
+                    : "font-bold text-yellow-400"
                 }
               >
                 {obj.title}
               </CorporateValuesTitle>
             </motion.div>
-          </AnimatePresence>
-
-          <AnimatePresence>
-            {item.id === index && expand && (
-              <motion.div
-                initial={{ opacity: 0, y: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className={`p-1 w-50 mb-3 `}
-              >
-                {item.description}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-    </div>
+            <AnimatePresence initial={false}>
+              {isActive && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: measuredHeight }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{
+                    height: { duration: 0.35, ease: "easeInOut" },
+                    opacity: { duration: 0.35, ease: "easeInOut" },
+                  }}
+                  className="overflow-hidden p-1 w-70 mb-3 text-lg"
+                >
+                  <div ref={contentRef}>{item.description}</div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        );
+      })}
+    </motion.div>
   );
 }
