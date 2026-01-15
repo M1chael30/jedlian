@@ -18,7 +18,7 @@ export default function CorporateResponsibilitySection() {
    initial="hidden"
    whileInView="show"
    viewport={{ once: true, amount: 0.3 }}
-   className="relative p-5 h-65 flex items-center overflow-hidden"
+   className="relative flex items-center overflow-hidden p-10 md:p-20"
   >
    {/* background image */}
    <Image
@@ -30,10 +30,13 @@ export default function CorporateResponsibilitySection() {
    />
 
    {/* content */}
-   <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto text-white gap-8">
+   <div className="relative z-10 flex flex-col md:flex-row w-full max-w-7xl mx-auto text-white gap-14">
     {/* left section */}
     <div className="space-y-4 w-full md:w-1/2">
-     <motion.h1 variants={fadeUpVariants} className="text-xl font-semibold">
+     <motion.h1
+      variants={fadeUpVariants}
+      className="text-lg md:text-xl lg:text-2xl font-semibold"
+     >
       Corporate Responsibility & Sustainability at Jedlian Holdings
      </motion.h1>
 
