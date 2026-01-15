@@ -5,8 +5,7 @@ import CorporateGovernanceHeader from "@/components/corporate-governance-header"
 
 export default function CorporateGovernance() {
  return (
-    <div className="flex flex-col justify-center items-center p-10 gap-10">
-      <CorporateGovernanceHeader/>
+    <div className="flex flex-col justify-center items-center p-10">
       <MissionVision/>
        <CorporateValues/> 
        <CodeOfConduct/>

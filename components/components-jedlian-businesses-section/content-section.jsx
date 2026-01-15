@@ -1,0 +1,51 @@
+import {
+ contentVariants,
+ imageVariants,
+ sectionVariants,
+} from "@/lib/animations";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import CustomButton from "../ui/custom-button";
+
+export default function ContentSection({ item }) {
+ return (
+  <AnimatePresence mode="wait">
+   <motion.section
+    key={item.id}
+    variants={sectionVariants}
+    initial="hidden"
+    animate="show"
+    exit="exit"
+    className="flex flex-col gap-14 md:flex-row md:justify-between w-full max-w-7xl mx-auto"
+   >
+    {/* Image */}
+    <motion.div variants={imageVariants} className="w-full md:w-1/2">
+     <Image src={item.img} alt={item.alt} className="object-cover rounded-xl" />
+    </motion.div>
+
+    {/* Content */}
+    <div className="w-full md:w-1/2 space-y-4">
+     <motion.h1
+      variants={contentVariants}
+      className="text-lg md:text-2xl lg:text-3xl font-bold"
+     >
+      {item.title}
+     </motion.h1>
+
+     <motion.p variants={contentVariants} className="text-muted-foreground">
+      {item.description}
+     </motion.p>
+
+     <motion.div variants={contentVariants}>
+      <CustomButton
+       icon={<ArrowRight size={18} />}
+       buttonHref={item.path}
+       buttonText="Read more"
+      />
+     </motion.div>
+    </div>
+   </motion.section>
+  </AnimatePresence>
+ );
+}
