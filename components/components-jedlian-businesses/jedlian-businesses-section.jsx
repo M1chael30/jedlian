@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { containerVariants } from "@/lib/animations";
 import ButtonCards from "./button-cards";
 import ContentSection from "./content-section";
-import { jedlianCommucnicationSectionData } from "@/lib/data";
+import { jedlianBusinessesData } from "@/lib/data";
 import { useState } from "react";
 
-export default function JedlianCommunicationsSection() {
+export default function JedlianBusinessesSection() {
  const [activeIndex, setActiveIndex] = useState(0);
- const activeItem = jedlianCommucnicationSectionData[activeIndex];
+ const activeItem = jedlianBusinessesData[activeIndex];
 
  return (
   <div className="p-5 space-y-8 my-20">
@@ -27,7 +27,7 @@ export default function JedlianCommunicationsSection() {
     viewport={{ once: true, amount: 0.2 }}
     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 w-full mx-auto max-w-7xl"
    >
-    {jedlianCommucnicationSectionData.map((button, index) => (
+    {jedlianBusinessesData.map((button, index) => (
      <ButtonCards
       className={index === activeIndex && "border-2 border-[#EFBF04]"}
       onClick={() => setActiveIndex(index)}
