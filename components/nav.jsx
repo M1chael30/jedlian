@@ -2,7 +2,7 @@
 
 import Navlink from "./nav-link";
 import Link from "next/link";
-import { navLinks, ourBusinesses, ourStory } from "@/lib/data";
+import { jedlianBusinessesData, navLinks, ourBusinesses, ourStory } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import MobileNavLinks from "./mobile-nav-links";
 import { NavigationMenuComponent } from "./navigation-menu-component";
@@ -28,7 +28,7 @@ export default function Nav() {
      />
      <NavigationMenuComponent
       navigationMenuTitle="Our Business"
-      dropdownMenuItem={ourBusinesses}
+      dropdownMenuItem={jedlianBusinessesData}
      />
      {navLinks.map((link, i) => (
       <Navlink

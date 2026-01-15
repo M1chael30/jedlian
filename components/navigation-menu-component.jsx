@@ -25,7 +25,7 @@ export function NavigationMenuComponent({
      {dropdownMenuItem.map((item, index) => (
       <DropdownMenuItem key={index}>
        <Link href={item.path} className="w-full">
-        {item.name}
+        {item.name ? item.name : item.title}
        </Link>
       </DropdownMenuItem>
      ))}
