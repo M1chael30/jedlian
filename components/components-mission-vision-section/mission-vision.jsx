@@ -6,7 +6,7 @@ export default function MissionVision() {
   return (
     <section className="flex gap-10 
     justify-center items-center
-    w-full mx-auto max-w-6xl">
+    w-full mx-auto max-w-6xl h-100">
 
       <MissionVisionWidget title={missionVisionData[0].title}
         description={missionVisionData[0].description}
