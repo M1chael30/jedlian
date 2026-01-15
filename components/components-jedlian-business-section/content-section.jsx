@@ -4,9 +4,9 @@ export default function ContentSection({ item }) {
  return (
   <div className="p-6 md:p-18 lg:px-48 lg:py-20 space-y-12 flex flex-col">
    {/* top section */}
-   <div className="space-y-2">
+   <div className="space-y-4">
     {/* title */}
-    <h1 className="font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-xl md:text-4xl">
+    <h1 className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-xl md:text-4xl">
      {item?.title}
     </h1>
     {/* description */}
