@@ -5,9 +5,8 @@ import {
 } from "@/lib/animations";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import CustomButton from "../ui/custom-button";
 
 export default function ContentSection({ item }) {
  return (
@@ -18,7 +17,7 @@ export default function ContentSection({ item }) {
     initial="hidden"
     animate="show"
     exit="exit"
-    className="flex flex-col gap-6 md:flex-row md:justify-between w-full max-w-7xl mx-auto"
+    className="flex flex-col gap-14 md:flex-row md:justify-between w-full max-w-7xl mx-auto"
    >
     {/* Image */}
     <motion.div variants={imageVariants} className="w-full md:w-1/2">
@@ -39,11 +38,11 @@ export default function ContentSection({ item }) {
      </motion.p>
 
      <motion.div variants={contentVariants}>
-      <Button asChild>
-       <Link href={item.path}>
-        Read More <ArrowRight />
-       </Link>
-      </Button>
+      <CustomButton
+       icon={<ArrowRight size={18} />}
+       buttonHref="#"
+       buttonText="Read more"
+      />
      </motion.div>
     </div>
    </motion.section>
