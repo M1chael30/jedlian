@@ -30,7 +30,7 @@ export default function CorporateValues() {
       </div>
 
       <div ref={containerRef} className="flex justify-center">
-        <div className="flex flex-wrap w-200 gap-5 justify-center">
+        <div className="flex flex-wrap w-50 md:w-200 gap-5 justify-center">
           {corporateValuesButtonsData.map((item, index) => (
             <CorporateValuesButton
               key={index}
