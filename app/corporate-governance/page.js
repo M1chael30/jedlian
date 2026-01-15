@@ -6,8 +6,10 @@ import MissionVision from "@/components/components-mission-vision-section/missio
 export default function CorporateGovernance() {
  return (
     <div className="flex flex-col justify-center items-center p-10">
+      <div className="min-h-screen">
       <CorporateGovernanceHeader/>
       <MissionVision/>
+      </div>
        <CorporateValues/> 
        <CodeOfConduct/>
     </div>
