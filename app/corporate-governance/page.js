@@ -1,5 +1,8 @@
 import CodeOfConduct from "@/components/components-code-of-conduct/code-of-conduct";
+<<<<<<< Updated upstream
 import CorporateGovernanceHeader from "@/components/corporate-governance-header";
+=======
+>>>>>>> Stashed changes
 import CorporateValues from "@/components/components-corporate-values-section/corporate-values";
 import MissionVision from "@/components/components-mission-vision-section/mission-vision";
 
