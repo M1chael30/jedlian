@@ -24,20 +24,20 @@ export default function CorporateValues() {
   }, []);
 
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 min-h-screen">
       <div className="flex justify-center items-center text-white p-5">
-        <h1 className="text-4xl font-extrabold">CORPORATE VALUES</h1>
+        <h1 className="text-6xl font-extrabold">CORPORATE VALUES</h1>
       </div>
 
-      <div ref={containerRef} className="flex gap-10">
-        <div className="flex flex-wrap w-120 gap-3.5 justify-center">
+      <div ref={containerRef} className="flex justify-center">
+        <div className="flex flex-wrap w-200 gap-5 justify-center">
           {corporateValuesButtonsData.map((item, index) => (
             <CorporateValuesButton
               key={index}
               customClassName={
                 expand && active === index
-                  ? "bg-amber-400 scale-115"
-                  : "bg-yellow-600"
+                  ? "bg-gradient-to-b from-amber-400 to-yellow-100 scale-115"
+                  : " bg-gradient-to-b from-yellow-600 to-yellow-200"
               }
               onClick={() => {
                 if (active === index) {
