@@ -1,5 +1,3 @@
-import CodeOfConduct from "@/components/components-code-of-conduct/code-of-conduct";
-import CorporateGovernanceHeader from "@/components/corporate-governance-header";
 import CorporateValues from "@/components/components-corporate-values-section/corporate-values";
 import MissionVision from "@/components/components-mission-vision-section/mission-vision";
 import CodeOfConduct from "@/components/components-code-of-conduct/code-of-conduct";
