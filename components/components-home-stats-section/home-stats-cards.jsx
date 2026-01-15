@@ -36,7 +36,7 @@ const itemVariants = {
 export default function HomeStatsCards() {
  return (
   <motion.div
-   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl"
+   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl px-6 md:p-0"
    variants={containerVariants}
    initial="hidden"
    whileInView="show"

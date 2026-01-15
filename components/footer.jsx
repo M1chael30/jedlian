@@ -1,5 +1,5 @@
-import FooterTopSection from "./components-footer/footer-top-section";
-import FooterBottomSection from "./components-footer/footer-bottom-section";
+import FooterTopSection from "./components-footer-section/footer-top-section";
+import FooterBottomSection from "./components-footer-section/footer-bottom-section";
 
 export default function Footer() {
  return (

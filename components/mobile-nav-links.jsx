@@ -11,7 +11,7 @@ import {
 import { ChartNoAxesGantt } from "lucide-react";
 import { Button } from "./ui/button";
 import Navlink from "./nav-link";
-import { footerContactUs, navLinks, ourBusinesses, ourStory } from "@/lib/data";
+import { jedlianBusinessesData, navLinks, ourStory } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import { NavigationMenuComponent } from "./navigation-menu-component";
 
@@ -40,7 +40,7 @@ export default function MobileNavLinks() {
      />
      <NavigationMenuComponent
       navigationMenuTitle="Our Business"
-      dropdownMenuItem={ourBusinesses}
+      dropdownMenuItem={jedlianBusinessesData}
      />
      {navLinks.map((link, i) => (
       <Navlink
