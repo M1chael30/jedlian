@@ -2,7 +2,8 @@
 
 import Navlink from "./nav-link";
 import Link from "next/link";
-import { jedlianBusinessesData, navLinks, ourBusinesses, ourStory } from "@/lib/data";
+import { navLinks, ourBusinesses, ourStory } from "@/lib/data";
+import { jedlianBusinessesData } from "@/lib/homePageData";
 import { usePathname } from "next/navigation";
 import MobileNavLinks from "./mobile-nav-links";
 import { NavigationMenuComponent } from "./navigation-menu-component";

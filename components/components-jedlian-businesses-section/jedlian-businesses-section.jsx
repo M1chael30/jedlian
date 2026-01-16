@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { containerVariants } from "@/lib/animations";
 import ButtonCards from "./button-cards";
 import ContentSection from "./content-section";
-import { jedlianBusinessesData } from "@/lib/data";
 import { useState } from "react";
+
+import { jedlianBusinessesData } from "@/lib/homePageData";
 
 export default function JedlianBusinessesSection() {
  const [activeIndex, setActiveIndex] = useState(0);

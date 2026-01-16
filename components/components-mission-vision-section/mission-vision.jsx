@@ -1,5 +1,5 @@
 import CorporateGovernanceHeader from "../corporate-governance-header";
-import { missionVisionData } from "@/lib/data";
+import { missionVisionData } from "@/lib/corporateGovernanceData";
 import MissionVisionWidget from "./mission-vision-widget";
 
 export default function MissionVision() {

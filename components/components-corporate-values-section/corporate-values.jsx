@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import CorporateValuesButton from "./corporate-values-button";
-import { corporateValuesButtonsData } from "@/lib/data";
+import { corporateValuesButtonsData } from "@/lib/corporateGovernanceData";
 import CorporateValuesContent from "./corporate-values-content";
 
 export default function CorporateValues() {

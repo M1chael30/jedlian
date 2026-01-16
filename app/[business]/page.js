@@ -2,7 +2,7 @@
 
 import ContentSection from "@/components/components-jedlian-business-section/content-section";
 import TopSection from "@/components/components-jedlian-business-section/top-section";
-import { jedlianBusinessesData } from "@/lib/data";
+import { jedlianBusinessesData } from "@/lib/homePageData";
 import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
 import Image from "next/image";
 import { useParams } from "next/navigation";

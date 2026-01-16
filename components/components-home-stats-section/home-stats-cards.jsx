@@ -2,7 +2,7 @@ import { Card } from "../ui/card";
 import { CardTitle } from "../ui/card";
 import { CardDescription } from "../ui/card";
 
-import { homeStatsData } from "@/lib/data";
+import { homeStatsData } from "@/lib/homePageData";
 import { motion } from "framer-motion";
 
 const containerVariants = {

@@ -11,7 +11,8 @@ import {
 import { ChartNoAxesGantt } from "lucide-react";
 import { Button } from "./ui/button";
 import Navlink from "./nav-link";
-import { jedlianBusinessesData, navLinks, ourStory } from "@/lib/data";
+import { navLinks, ourStory } from "@/lib/data";
+import { jedlianBusinessesData } from "@/lib/homePageData";
 import { usePathname } from "next/navigation";
 import { NavigationMenuComponent } from "./navigation-menu-component";
 
