@@ -24,7 +24,7 @@ export default function CorporateValues() {
   }, []);
 
   return (
-    <section className="flex flex-col min-h-screen">
+    <section className="flex flex-col">
       <div className="flex items-center py-5 md:justify-center ">
         <h1 className="text-xl md:text-4xl lg:text-6xl font-extrabold">
           CORPORATE VALUES
