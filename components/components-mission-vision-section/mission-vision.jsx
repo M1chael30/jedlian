@@ -7,7 +7,7 @@ export default function MissionVision() {
     <section
       className="
         grid grid-cols-1 md:grid-cols-2
-       gap-8 p-10"
+       gap-8 py-10"
     >
       <MissionVisionWidget
         title={missionVisionData[0].title}
