@@ -24,12 +24,12 @@ export default function CorporateValues() {
   }, []);
 
   return (
-    <section className="flex flex-col">
-      <div className="flex items-center py-5 md:justify-center ">
+    <section className="flex flex-col py-20">
+      {/* <div className="flex items-center py-5 md:justify-center ">
         <h1 className="text-xl md:text-4xl lg:text-6xl font-extrabold">
           CORPORATE VALUES
         </h1>
-      </div>
+      </div> */}
 
       <div
         ref={containerRef}

@@ -3,12 +3,10 @@ import CodeOfConductSquare from "./code-of-conduct-square";
 
 export default function CodeOfConduct() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col py-20">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <CodeOfConductDesc />
-        {/* <div className="flex items-center justify-center h-full "> */}
           <CodeOfConductSquare />
-        {/* </div> */}
       </div>
     </section>
   );
