@@ -13,8 +13,8 @@ export default function MissionVisionWidget({
         flex flex-col gap-4 sm:gap-6
         justify-center items-center
         rounded-3xl sm:rounded-4xl
-        p-10 w-full h-80 lg:w-full
-
+        p-10 w-full h-60 lg:w-full
+        md:h-80 md:w-80
         text-black border-white border-2
         ${customClassName}
       `}
