@@ -16,7 +16,7 @@ export default function CorporateGovernance() {
         />
    <MissionVision />
    <CorporateValues />
-   {/* <CodeOfConduct /> */}
+   <CodeOfConduct />
   </div>
  );
 }
