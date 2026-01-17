@@ -49,7 +49,7 @@ export default function CorporateValues() {
                   setExpand((prev) => !prev);
                 } else {
                   setActive(index);
-                  setExpand(true);
+                  setExpand((true));
                 }
               }}
             >

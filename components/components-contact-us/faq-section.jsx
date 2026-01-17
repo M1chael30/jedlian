@@ -1,7 +1,11 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { faqData } from "@/lib/contactUsData";
 
 export default function FaqSection() {
+  const [active,setActive] = useState(0)
+const [expand, setExpand] = useState(false)
+
   return (
     <section className="w-full">
       <div>
@@ -18,9 +22,15 @@ export default function FaqSection() {
       </div>
       <div className="space-y-3">
         {faqData.map((item, index) => (
-          <div key={index} className="flex flex-col">
-            <a href="" className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
-             text-transparent bg-clip-text border-b-2">{item.question}</a>
+          <div key={index} className="flex flex-col border-b-2 py-1">
+            <div className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
+             text-transparent bg-clip-text"
+             onClick={()=>{
+              setActive(index)
+              setExpand((prev)=>!prev)
+             }}
+             >{item.question}</div>
+             <p className={`${expand && active == item.id ? null : "hidden" }`}>{item.answer}</p>
           </div>
         ))}
       </div>
