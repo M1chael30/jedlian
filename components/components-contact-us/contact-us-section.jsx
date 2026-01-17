@@ -13,7 +13,7 @@ export default function ContactUsSection() {
                 <h1>Contact Us</h1>
             </div>
         <div>
-          <div className="w-70 md:w-65 py-5">{contactsData.description}</div>
+          <div className="w-70 md:w-75 py-5 text-[#E9DFDF]">{contactsData.description}</div>
           <div className="text-sm flex flex-col gap-2">
             <div className="flex gap-2 items-center">
               <div className="text-lg flex items-center rounded-full p-2
@@ -36,12 +36,10 @@ export default function ContactUsSection() {
               business hours
             </h1>
             <div className="">
-              {contactsData.schedule.map((item, index) => (
-                <div key={index} className="flex gap-2 justify-between">
-                  <p>{item.day}</p>
-                  <p>{item.hours}</p>
+                <div className="S">
+                  <p>{contactsData.day}</p>
+                  <p className="text-sm">{contactsData.hours}</p>
                 </div>
-              ))}
             </div>
           </div>
         </div>
