@@ -15,7 +15,7 @@ export default function CorporateGovernance() {
          className="w-full h-auto max-w-full object-contain"
         />
    <MissionVision />
-         <div className="flex items-center py-5 md:justify-center bg-white w-full text-black bg-radial-[at_25%_25%] from-white to-zinc-400 to-75%">
+         <div className="flex items-center py-5 md:justify-center text-white">
         <h1 className="text-xl md:text-4xl lg:text-6xl font-extrabold ">
           CORPORATE VALUES
         </h1>
