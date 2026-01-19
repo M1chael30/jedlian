@@ -35,7 +35,7 @@ export default function CorporateResponsibilitySection() {
     <div className="space-y-4 w-full md:w-1/2">
      <motion.h1
       variants={fadeUpVariants}
-      className="text-lg md:text-xl lg:text-2xl font-semibold"
+      className="text-subtitle font-semibold"
      >
       Corporate Responsibility & Sustainability at Jedlian Holdings
      </motion.h1>

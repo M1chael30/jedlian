@@ -46,12 +46,12 @@ export default function HomeStatsCards() {
     <motion.div className="cursor-pointer" key={index} variants={itemVariants}>
      <Card className="p-5 text-black bg-white/75 border-yellow-600 hover:scale-110 duration-400 justify-center h-55 md:h-60 lg:h-85">
       <CardTitle className={"cursor-default text-center"}>
-       <div className="text-4xl md:text-5xl font-extrabold text-shadow-xs">
+       <div className="text-title font-extrabold text-shadow-xs">
         {item.number}
        </div>
-       <div className="text-lg md:text-xl italic">{item.title}</div>
+       <div className="text-subtitle italic">{item.title}</div>
       </CardTitle>
-      <CardDescription className="text-zinc-900 text-xs md:text-sm">
+      <CardDescription className="text-zinc-900 text-sm">
        {item.description}
       </CardDescription>
      </Card>
