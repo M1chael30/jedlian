@@ -1,4 +1,3 @@
-import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 
 import {
@@ -13,6 +12,8 @@ import {
  Carousel,
  CarouselContent,
  CarouselItem,
+ CarouselNext,
+ CarouselPrevious,
 } from "@/components/ui/carousel";
 import { homeStatsData } from "@/lib/homePageData";
 
@@ -49,6 +50,8 @@ export function HomeStatsCardMobile() {
      </CarouselItem>
     ))}
    </CarouselContent>
+   <CarouselPrevious />
+   <CarouselNext />
   </Carousel>
  );
 }
