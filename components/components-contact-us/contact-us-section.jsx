@@ -14,8 +14,8 @@ export default function ContactUsSection() {
              text-transparent bg-clip-text border-b-2 border-b-[#c89116] py-5">
                 <h1>Contact Us</h1>
             </div>
-        <div>
-          <div className="w-80 md:w-85 py-5 text-[#E9DFDF] text-lg">{contactsData.description}</div>
+        <div className="space-y-5">
+          <div className="w-80 md:w-85 text-[#E9DFDF] text-lg">{contactsData.description}</div>
           <div className="text-sm flex flex-col gap-2">
             <div className="flex gap-2 items-center">
               <div className="text-lg flex items-center rounded-full p-2
@@ -33,7 +33,7 @@ export default function ContactUsSection() {
               <p>{contactsData.email}</p>
             </div>
           </div>
-          <div className="py-5 space-y-2">
+          <div className="space-y-2">
             <h1 className="uppercase font-extrabold text-2xl bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] text-transparent bg-clip-text">
               business hours
             </h1>
@@ -47,7 +47,7 @@ export default function ContactUsSection() {
         </div>
         <div className="space-y-3 md:space-y-0">
           <div className=" flex flex-col md:py-5">
-            <div className="w-145 md:h-70 h-50">
+            <div className="w-full md:h-70 h-50">
               <iframe
                 src={contactsData.mapsLink}
                 allowFullScreen=""
