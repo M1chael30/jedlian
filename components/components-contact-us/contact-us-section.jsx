@@ -15,7 +15,7 @@ export default function ContactUsSection() {
                 <h1>Contact Us</h1>
             </div>
         <div>
-          <div className="w-70 md:w-75 py-5 text-[#E9DFDF]">{contactsData.description}</div>
+          <div className="w-80 md:w-85 py-5 text-[#E9DFDF] text-lg">{contactsData.description}</div>
           <div className="text-sm flex flex-col gap-2">
             <div className="flex gap-2 items-center">
               <div className="text-lg flex items-center rounded-full p-2
