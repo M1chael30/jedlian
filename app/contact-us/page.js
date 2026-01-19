@@ -12,10 +12,8 @@ export default function ContactUs() {
              text-transparent bg-clip-text ">Contact Us</h1>
       </div>
         <div className="h-1 my-3 w-full bg-[#c89116]"/>
-      <ContactUsSection />
-      <FaqSection />
-
-      {/* <div className=""/> */}
+      <ContactUsSection/>
+      <FaqSection/>
     </div>
   );
 }

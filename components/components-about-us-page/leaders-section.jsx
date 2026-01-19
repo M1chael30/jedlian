@@ -1,8 +1,19 @@
-import React from 'react'
-import { companyLeadersData } from '@/lib/aboutUsData'
+import React from "react";
+import { companyLeadersData } from "@/lib/aboutUsData";
+import PersonWidget from "./person-widget";
 
 export default function LeadersSection() {
   return (
-    <div>LeadersSection</div>
-  )
+    <div className="space-y-10 p-10 flex flex-col items-center">
+      {companyLeadersData.map((person, index) => (
+        <PersonWidget
+          key={index}
+          image={person.image}
+          name={person.name}
+          position={person.position}
+          content={person.textContent}
+        />
+      ))}
+    </div>
+  );
 }
