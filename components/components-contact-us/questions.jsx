@@ -17,9 +17,9 @@ export default function Questions() {
       {faqData.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}` }>
           <AccordionTrigger className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
-             text-transparent bg-clip-text font-extrabold text-lg">{item.question}</AccordionTrigger>
+             text-transparent bg-clip-text font-extrabold md:text-lg text-md">{item.question}</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
-            <p>{item.answer}</p>
+            <p className="md:text-sm">{item.answer}</p>
           </AccordionContent>
         </AccordionItem>
       ))}
