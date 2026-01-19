@@ -4,31 +4,27 @@ export default function ContentSection({ item }) {
  return (
   <div className="p-6 md:p-18 lg:px-48 lg:py-20 space-y-12 flex flex-col">
    {/* top section */}
-   <div className="space-y-4">
+   <div>
     {/* title */}
-    <h1 className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-xl md:text-4xl">
+    <h1 className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title">
      {item?.title}
     </h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item?.descriptionTwo}</p>
+    <p className="text-description text-justify">{item?.descriptionTwo}</p>
    </div>
    {/* mid section */}
    <div className="space-y-2">
     {/* title */}
-    <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
-     {item?.titleTwo}
-    </h1>
+    <h1 className="font-bold text-subtitle">{item?.titleTwo}</h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item?.descriptionThree}</p>
+    <p className="text-description text-justify">{item?.descriptionThree}</p>
    </div>
    {/* bottom section */}
    <div className="space-y-2">
     {/* title */}
-    <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
-     {item?.titleThree}
-    </h1>
+    <h1 className="font-bold text-subtitle">{item?.titleThree}</h1>
     {/* description */}
-    <p className="text-xs md:text-sm">{item?.descriptionFour}</p>
+    <p className="text-description text-justify">{item?.descriptionFour}</p>
    </div>
    {/* icon */}
    <div className="flex space-x-4">
