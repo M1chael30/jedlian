@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { faqData } from "@/lib/contactUsData";
+import Questions from "./questions";
+
 
 export default function FaqSection() {
   const [active,setActive] = useState(0)
@@ -20,20 +22,8 @@ const [expand, setExpand] = useState(false)
                   ">Do you have any questions for us?</p>
         </div>
       </div>
-      <div className="space-y-3">
-        {faqData.map((item, index) => (
-          <div key={index} className="flex flex-col border-b-2 py-1">
-            <div className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
-             text-transparent bg-clip-text"
-             onClick={()=>{
-              setActive(index)
-              setExpand((prev)=>!prev)
-             }}
-             >{item.question}</div>
-             <p className={`${expand && active == item.id ? null : "hidden" }`}>{item.answer}</p>
-          </div>
-        ))}
-      </div>
+      <Questions/>
+
     </section>
   );
 }
