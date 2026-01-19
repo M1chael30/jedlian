@@ -36,31 +36,22 @@ const itemVariants = {
 export default function HomeStatsCards() {
  return (
   <motion.div
-   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl px-6 md:p-0"
+   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl md:px-6 md:p-0 px-12"
    variants={containerVariants}
    initial="hidden"
    whileInView="show"
    viewport={{ once: true, amount: 0.3 }}
   >
    {homeStatsData.map((item, index) => (
-    <motion.div className=" cursor-pointer" key={index} variants={itemVariants}>
-     <Card
-      className="flex flex-col items-center justify-center p-5 h-80
-             text-black bg-white/75 border-yellow-600 hover:scale-110 duration-400
-            "
-     >
-      <CardTitle
-       className={"cursor-default flex flex-col justify-center items-center"}
-      >
-       <div className="text-5xl font-extrabold text-shadow-xs">
+    <motion.div className="cursor-pointer" key={index} variants={itemVariants}>
+     <Card className="p-5 text-black bg-white/75 border-yellow-600 hover:scale-110 duration-400 justify-center h-55 md:h-60 lg:h-85">
+      <CardTitle className={"cursor-default text-center"}>
+       <div className="text-4xl md:text-5xl font-extrabold text-shadow-xs">
         {item.number}
        </div>
-       <div className="text-sm italic">{item.title}</div>
+       <div className="text-lg md:text-xl italic">{item.title}</div>
       </CardTitle>
-      <CardDescription
-       className="flex flex-col items-center justify-center 
-            w-50 text-zinc-900 text-center"
-      >
+      <CardDescription className="text-zinc-900 text-xs md:text-sm">
        {item.description}
       </CardDescription>
      </Card>
