@@ -1,8 +1,7 @@
-import { EmptyComponent } from "@/components/empty-component";
-import { Rocket } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
 import ContactUsSection from "@/components/components-contact-us/contact-us-section";
 import FaqSection from "@/components/components-contact-us/faq-section";
+import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
+import Image from "next/image";
 
 export default function ContactUs() {
   return (

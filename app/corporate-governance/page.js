@@ -5,21 +5,20 @@ import CorporateGovernanceHeader from "@/components/corporate-governance-header"
 import bannerCorporateGovernance from "@/public/images/banners/bannerCorporateGovernance.png";
 import Image from "next/image";
 
-
 export default function CorporateGovernance() {
  return (
-  <div className="flex flex-col justify-center items-center  mx-auto max-w-7xl w-full">
-        <Image
-         src={bannerCorporateGovernance}
-         alt="Jedlian landing page image"
-         className="w-full h-auto max-w-full object-contain"
-        />
+  <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
+   <Image
+    src={bannerCorporateGovernance}
+    alt="Jedlian landing page image"
+    className="w-full h-auto max-w-full object-contain"
+   />
    <MissionVision />
-         <div className="flex items-center py-5 md:justify-center text-white">
-        <h1 className="text-xl md:text-4xl lg:text-6xl font-extrabold ">
-          CORPORATE VALUES
-        </h1>
-      </div>
+   <div className="flex items-center md:justify-center">
+    <h1 className="text-title font-extrabold">
+     CORPORATE VALUES
+    </h1>
+   </div>
    <CorporateValues />
    <CodeOfConduct />
   </div>

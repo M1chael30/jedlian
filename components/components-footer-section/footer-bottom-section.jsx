@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { CiFacebook } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa6";
-import { FaRegEnvelope } from "react-icons/fa6";
 import Navlink from "../nav-link";
 
 export default function FooterBottomSection() {
@@ -12,16 +10,6 @@ export default function FooterBottomSection() {
      <li>
       <Link href="/">
        <CiFacebook />
-      </Link>
-     </li>
-     <li>
-      <Link href="/">
-       <FaInstagram />
-      </Link>
-     </li>
-     <li>
-      <Link href="/">
-       <FaRegEnvelope />
       </Link>
      </li>
     </ul>

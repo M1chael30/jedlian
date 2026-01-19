@@ -1,4 +1,4 @@
-import { Card } from "../ui/card";
+import { Card, CardFooter, CardHeader } from "../ui/card";
 import { CardTitle } from "../ui/card";
 import { CardDescription } from "../ui/card";
 
@@ -36,33 +36,30 @@ const itemVariants = {
 export default function HomeStatsCards() {
  return (
   <motion.div
-   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl px-6 md:p-0"
+   className="grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl hidden md:grid"
    variants={containerVariants}
    initial="hidden"
    whileInView="show"
    viewport={{ once: true, amount: 0.3 }}
   >
    {homeStatsData.map((item, index) => (
-    <motion.div className=" cursor-pointer" key={index} variants={itemVariants}>
-     <Card
-      className="flex flex-col items-center justify-center p-5 h-80
-             text-black bg-white/75 border-yellow-600 hover:scale-110 duration-400
-            "
-     >
-      <CardTitle
-       className={"cursor-default flex flex-col justify-center items-center"}
-      >
-       <div className="text-5xl font-extrabold text-shadow-xs">
+    <motion.div className="cursor-pointer" key={index} variants={itemVariants}>
+     <Card className="text-black bg-white/75 border-yellow-600 hover:scale-110 duration-400 justify-center h-70 md:h-60 lg:h-76">
+      <CardHeader>
+       <CardTitle
+        className={
+         "cursor-default text-center text-title font-extrabold text-shadow-xs"
+        }
+       >
         {item.number}
-       </div>
-       <div className="text-sm italic">{item.title}</div>
-      </CardTitle>
-      <CardDescription
-       className="flex flex-col items-center justify-center 
-            w-50 text-zinc-900 text-center"
-      >
-       {item.description}
-      </CardDescription>
+       </CardTitle>
+       <CardDescription className="text-zinc-900 text-sm text-center text-description italic">
+        {item.title}
+       </CardDescription>
+      </CardHeader>
+      <CardFooter>
+       <p className="text-zinc-900 text-sm">{item.description}</p>
+      </CardFooter>
      </Card>
     </motion.div>
    ))}

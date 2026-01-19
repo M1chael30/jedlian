@@ -1,14 +1,14 @@
 import MissionVisionCircles from "./mission-vision-circles";
 
 export default function MissionVisionWidget({
-  title,
-  description,
-  customClassName,
-  type,
+ title,
+ description,
+ customClassName,
+ type,
 }) {
-  return (
-    <div
-      className={`
+ return (
+  <div
+   className={`
         relative overflow-hidden
         flex flex-col gap-4 sm:gap-6
         justify-center items-center
@@ -18,16 +18,16 @@ export default function MissionVisionWidget({
         text-black border-white border-2
         ${customClassName}
       `}
-    >
-      <h1 className="uppercase font-extrabold text-2xl sm:text-3xl lg:text-4xl text-center">
-        {title}
-      </h1>
+  >
+   <h1 className="uppercase font-extrabold text-title text-center">
+    {title}
+   </h1>
 
-      <p className="text-base sm:text-lg lg:text-xl text-center max-w-prose">
-        {description}
-      </p>
+   <p className="text-description text-center max-w-prose">
+    {description}
+   </p>
 
-      <MissionVisionCircles type={type} />
-    </div>
-  );
+   <MissionVisionCircles type={type} />
+  </div>
+ );
 }

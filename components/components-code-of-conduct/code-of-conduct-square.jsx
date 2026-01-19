@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function CodeOfConductSquare() {
-    return (
-        <div className='bg-yellow-200 w-100 rounded-3xl justify-self-center
-        flex items-end p-5 invisible md:visible'>
-            <h1 className='text-black text-2xl font-extrabold w-40'>
-                Code of Conduct
-            </h1>
-
-        </div>
-    )
+ return (
+  <div className="bg-yellow-200 rounded-3xl p-5 w-full md:w-1/2 relative hidden md:block">
+   <h1 className="font-extrabold text-black text-subtitle absolute bottom-5 left-5">
+    Code of Conduct
+   </h1>
+  </div>
+ );
 }
