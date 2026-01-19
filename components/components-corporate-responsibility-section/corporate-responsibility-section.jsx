@@ -43,7 +43,7 @@ export default function CorporateResponsibilitySection() {
      <motion.div variants={fadeUpVariants}>
       <CustomButton
        buttonText="Visit Governance"
-       buttonHref="#"
+       buttonHref="/corporate-governance"
        icon={<ArrowRight size={18} />}
       />
      </motion.div>
