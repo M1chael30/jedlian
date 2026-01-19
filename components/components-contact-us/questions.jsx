@@ -12,7 +12,7 @@ export default function Questions() {
       type="single"
       collapsible
       className="w-full"
-      defaultValue="item-1"
+      defaultValue=""
     >
       {faqData.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}` }>
