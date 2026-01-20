@@ -3,13 +3,21 @@
 import BottomSection from "@/components/components-jedlian-business-section/bottom-section";
 import ContentSection from "@/components/components-jedlian-business-section/content-section";
 import TopSection from "@/components/components-jedlian-business-section/top-section";
-import { jedlianBusinessesData } from "@/lib/homePageData";
+import {
+ jedlianBusinessesData,
+ jedlianCommunicationOffices,
+} from "@/lib/homePageData";
 import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
 export default function Business() {
  const params = useParams();
+ let data;
+
+ if (params.business === "jedlian-communication") {
+  data = jedlianCommunicationOffices;
+ }
 
  const item = jedlianBusinessesData.find(
   (item) => item.path === String(params.business),
@@ -30,7 +38,7 @@ export default function Business() {
    <div className="relative z-10 flex flex-col">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
-    <BottomSection />
+    <BottomSection items={data} />
    </div>
   </section>
  );

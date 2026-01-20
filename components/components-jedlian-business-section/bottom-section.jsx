@@ -6,9 +6,8 @@ import {
  CarouselNext,
  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { contactsData } from "@/lib/contactUsData";
 
-export default function BottomSection() {
+export default function BottomSection({ items = [] }) {
  return (
   <div className="p-6 md:p-18 lg:px-48 lg:py-10 space-y-8 w-full">
    {/* title */}
@@ -17,13 +16,13 @@ export default function BottomSection() {
    </h1>
 
    {/* content */}
-   <Carousel className="w-70 mx-auto">
+   <Carousel className="w-70 md:w-full mx-auto">
     <CarouselContent>
-     {Array.from({ length: 5 }).map((_, index) => (
+     {items.location?.map((item, index) => (
       <CarouselItem key={index}>
-       <div className="p-1 overflow-hidden">
+       <div key={index} className="p-1 overflow-hidden md:h-88">
         <iframe
-         src={contactsData.mapsLink}
+         src={"https://www.google.com/maps/embed?pb=" + item?.longLat}
          allowFullScreen=""
          loading="lazy"
          referrerPolicy="no-referrer-when-downgrade"
@@ -33,8 +32,8 @@ export default function BottomSection() {
       </CarouselItem>
      ))}
     </CarouselContent>
-    <CarouselPrevious className="-left-7.75" />
-    <CarouselNext className="-right-7.75" />
+    <CarouselPrevious className="-left-7.75 md:-left-12 md:top-1/2" />
+    <CarouselNext className="-right-7.75 md:-right-12 md:top-1/2" />
    </Carousel>
   </div>
  );
