@@ -21,9 +21,9 @@ export default function Business() {
  if (params.business === "jedlian-communication") {
   data = jedlianCommunicationOffices;
  } else if (params.business === "jedlian-gasoline") {
-  data = jedlianDrugstoreBranches;
- } else if (params.business === "jedlian-drugstore") {
   data = jedlianGasolineBranches;
+ } else if (params.business === "jedlian-drugstore") {
+  data = jedlianDrugstoreBranches;
  }
 
  if (params.business === "jedlian-communication") {
