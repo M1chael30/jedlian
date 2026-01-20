@@ -4,7 +4,7 @@ import PersonWidget from "./person-widget";
 
 export default function LeadersSection() {
   return (
-    <div className="space-y-10 p-10 flex flex-col items-center">
+    <div className="space-y-10 px-10 flex flex-col items-center">
       {companyLeadersData.map((person, index) => (
         <PersonWidget
           key={index}
