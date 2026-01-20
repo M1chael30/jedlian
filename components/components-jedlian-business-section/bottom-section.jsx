@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import {
  Carousel,
  CarouselContent,
@@ -6,6 +5,7 @@ import {
  CarouselNext,
  CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function BottomSection({ items = [] }) {
  return (
@@ -16,7 +16,14 @@ export default function BottomSection({ items = [] }) {
    </h1>
 
    {/* content */}
-   <Carousel className="w-70 md:w-full mx-auto">
+   <Carousel
+    className="w-70 md:w-full mx-auto"
+    plugins={[
+     Autoplay({
+      delay: 3000,
+     }),
+    ]}
+   >
     <CarouselContent>
      {items.location?.map((item, index) => (
       <CarouselItem key={index}>
