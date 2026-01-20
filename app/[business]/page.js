@@ -1,5 +1,6 @@
 "use client";
 
+import BottomSection from "@/components/components-jedlian-business-section/bottom-section";
 import ContentSection from "@/components/components-jedlian-business-section/content-section";
 import TopSection from "@/components/components-jedlian-business-section/top-section";
 import { jedlianBusinessesData } from "@/lib/homePageData";
@@ -11,7 +12,7 @@ export default function Business() {
  const params = useParams();
 
  const item = jedlianBusinessesData.find(
-  (item) => item.path === String(params.business)
+  (item) => item.path === String(params.business),
  );
 
  return (
@@ -29,6 +30,7 @@ export default function Business() {
    <div className="relative z-10 flex flex-col">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
+    <BottomSection />
    </div>
   </section>
  );
