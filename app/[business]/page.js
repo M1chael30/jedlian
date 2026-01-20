@@ -6,6 +6,8 @@ import TopSection from "@/components/components-jedlian-business-section/top-sec
 import {
  jedlianBusinessesData,
  jedlianCommunicationOffices,
+ jedlianDrugstoreBranches,
+ jedlianGasolineBranches,
 } from "@/lib/homePageData";
 import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
 import Image from "next/image";
@@ -14,9 +16,22 @@ import { useParams } from "next/navigation";
 export default function Business() {
  const params = useParams();
  let data;
+ let content;
 
  if (params.business === "jedlian-communication") {
   data = jedlianCommunicationOffices;
+ } else if (params.business === "jedlian-gasoline") {
+  data = jedlianDrugstoreBranches;
+ } else if (params.business === "jedlian-drugstore") {
+  data = jedlianGasolineBranches;
+ }
+
+ if (params.business === "jedlian-communication") {
+  content = <BottomSection items={data} />;
+ } else if (params.business === "jedlian-gasoline") {
+  content = <BottomSection items={data} />;
+ } else if (params.business === "jedlian-drugstore") {
+  content = <BottomSection items={data} />;
  }
 
  const item = jedlianBusinessesData.find(
@@ -38,7 +53,7 @@ export default function Business() {
    <div className="relative z-10 flex flex-col">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
-    <BottomSection items={data} />
+    {content}
    </div>
   </section>
  );
