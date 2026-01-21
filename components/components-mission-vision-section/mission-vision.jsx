@@ -11,7 +11,7 @@ export default function MissionVision() {
      md:gap-5 gap-10 px-10 justify-center items-center
      text-center"
     >
-      <div>
+      <div className="border-1 border-yellow-400 rounded-4xl p-10">
         <div className="flex flex-col items-center">
           <PiTargetFill className="text-7xl md:text-9xl text-yellow-400" />
           <h1 className="uppercase text-title text-yellow-400">
@@ -20,7 +20,7 @@ export default function MissionVision() {
         </div>
         <p className="text-description">{missionVisionData[0].description}</p>
       </div>
-      <div>
+      <div className="border-1 border-yellow-400 rounded-4xl p-10">
         <div className="flex flex-col items-center">
           <BsEyeFill className="text-7xl md:text-9xl text-yellow-400" />
           <h1 className="uppercase text-title text-yellow-400">
