@@ -1,17 +1,41 @@
 "use client";
 
+import BottomSection from "@/components/components-jedlian-business-section/bottom-section";
 import ContentSection from "@/components/components-jedlian-business-section/content-section";
 import TopSection from "@/components/components-jedlian-business-section/top-section";
-import { jedlianBusinessesData } from "@/lib/homePageData";
+import {
+ jedlianBusinessesData,
+ jedlianCommunicationOffices,
+ jedlianDrugstoreBranches,
+ jedlianGasolineBranches,
+} from "@/lib/homePageData";
 import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
 export default function Business() {
  const params = useParams();
+ let data;
+ let content;
+
+ if (params.business === "jedlian-communication") {
+  data = jedlianCommunicationOffices;
+ } else if (params.business === "jedlian-gasoline") {
+  data = jedlianGasolineBranches;
+ } else if (params.business === "jedlian-drugstore") {
+  data = jedlianDrugstoreBranches;
+ }
+
+ if (params.business === "jedlian-communication") {
+  content = <BottomSection items={data} />;
+ } else if (params.business === "jedlian-gasoline") {
+  content = <BottomSection items={data} />;
+ } else if (params.business === "jedlian-drugstore") {
+  content = <BottomSection items={data} />;
+ }
 
  const item = jedlianBusinessesData.find(
-  (item) => item.path === String(params.business)
+  (item) => item.path === String(params.business),
  );
 
  return (
@@ -29,6 +53,7 @@ export default function Business() {
    <div className="relative z-10 flex flex-col">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
+    {content}
    </div>
   </section>
  );

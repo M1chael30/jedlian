@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function COCReadHere() {
-  return (
-    <div className='flex justify-between items-center w-70 p-1 md:p-2 rounded-full bg-zinc-400 text-black'>
-      <p className='ml-5 text-xs md:text-lg'>Read Here</p>
-      <button className='rounded-full bg-zinc-100 p-2 md:p-5'>
-        <FaArrowRight/>
-      </button>
-    </div>
-  )
+ return (
+  <div className="flex items-center justify-between px-8 py-4 rounded-full bg-zinc-400 text-black md:w-80 md:justify-self-end">
+   <p className="text-subtitle">Read Here</p>
+   <button className="cursor-pointer rounded-full bg-zinc-100 p-4">
+    <FaArrowRight size={14} />
+   </button>
+  </div>
+ );
 }

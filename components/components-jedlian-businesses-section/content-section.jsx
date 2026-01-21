@@ -26,14 +26,14 @@ export default function ContentSection({ item }) {
 
     {/* Content */}
     <div className="w-full md:w-1/2 space-y-4">
-     <motion.h1
-      variants={contentVariants}
-      className="text-lg md:text-2xl lg:text-3xl font-bold"
-     >
+     <motion.h1 variants={contentVariants} className="text-title font-bold">
       {item.title}
      </motion.h1>
 
-     <motion.p variants={contentVariants} className="text-muted-foreground">
+     <motion.p
+      variants={contentVariants}
+      className="text-description text-muted-foreground"
+     >
       {item.description}
      </motion.p>
 
