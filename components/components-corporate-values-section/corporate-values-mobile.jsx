@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import CorporateValuestitle from "./corporate-values-title";
+import Image from "next/image";
 
 export default function CorporateValuesMobile() {
   return (
@@ -26,13 +27,17 @@ export default function CorporateValuesMobile() {
                 <CorporateValuesButton
                   key={index}
                   customClassName={
-                    "bg-gradient-to-b from-amber-400 to-yellow-100"
+                    "bg-gradient-to-b from-yellow-600 to-yellow-200"
                   }
                 >
-                  {item.id}
+                  <Image src={item.logo} alt="logo" className="w-20 h-20" />
                 </CorporateValuesButton>
                 <div className="text-center">
-                  <CorporateValuestitle customClassName={`font-bold text-yellow-400`}>{item.title}</CorporateValuestitle>
+                  <CorporateValuestitle
+                    customClassName={`font-bold text-yellow-400`}
+                  >
+                    {item.title}
+                  </CorporateValuestitle>
                   <p className="text-description h-20">{item.description}</p>
                 </div>
               </div>
