@@ -7,25 +7,23 @@ import Image from "next/image";
 import CorporateValuesMobile from "@/components/components-corporate-values-section/corporate-values-mobile";
 
 export default function CorporateGovernance() {
- return (
-  <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
-   <Image
-    src={bannerCorporateGovernance}
-    alt="Jedlian landing page image"
-    className="w-full h-auto max-w-full object-contain"
-   />
-   <MissionVision />
-   <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
-
-   <div className="flex flex-col items-center md:justify-center">
-    <h1 className="text-title font-extrabold mt-5 text-center">
-     CORPORATE VALUES
-    </h1>
-   <CorporateValues />
-   <CorporateValuesMobile/>
-   </div>
-   {/* <CodeOfConduct /> */}
-  </div>
-  </div>
- );
+  return (
+    <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
+      <Image
+        src={bannerCorporateGovernance}
+        alt="Jedlian landing page image"
+        className="w-full h-auto max-w-full object-contain"
+      />
+      <MissionVision />
+      <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center md:justify-center">
+          <h1 className="text-title font-extrabold mt-5 text-center">
+            CORPORATE VALUES
+          </h1>
+          <CorporateValues />
+          <CorporateValuesMobile />
+        </div>
+      </div>
+    </div>
+  );
 }
