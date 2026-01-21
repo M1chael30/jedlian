@@ -22,7 +22,7 @@ export default function CorporateValuesMobile() {
         <CarouselContent>
           {corporateValuesButtonsData.map((item, index) => (
             <CarouselItem key={index} className="">
-              <div className=" flex flex-col items-center justify-center gap-5 h-70">
+              <div className=" flex flex-col items-center justify-center gap-3">
                 <CorporateValuesButton
                   key={index}
                   customClassName={
