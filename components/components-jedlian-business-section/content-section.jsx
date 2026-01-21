@@ -1,4 +1,6 @@
 import Link from "next/link";
+import CustomButton from "../ui/custom-button";
+import { ArrowRight } from "lucide-react";
 
 export default function ContentSection({ item }) {
  return (
@@ -10,7 +12,15 @@ export default function ContentSection({ item }) {
      {item?.title}
     </h1>
     {/* description */}
-    <p className="text-description text-justify">{item?.descriptionTwo}</p>
+    <p className="text-description text-justify mb-10">
+     {item?.descriptionTwo}
+    </p>
+    {/* button  */}
+    <CustomButton
+     icon={<ArrowRight size={18} />}
+     buttonText="Learn more about casa"
+     buttonHref="#"
+    />
    </div>
    {/* mid section */}
    <div className="space-y-2">
@@ -28,10 +38,10 @@ export default function ContentSection({ item }) {
    </div>
    {/* icon */}
    <div className="flex space-x-4">
-    {item?.icon &&
-     item.icon.map((Icon, index) => (
-      <Link href={"#"} key={index}>
-       <Icon size={32} />
+    {item?.socials &&
+     item.socials.map((item, index) => (
+      <Link href={item.socialLink} key={index}>
+       <item.icon size={32} />
       </Link>
      ))}
    </div>
