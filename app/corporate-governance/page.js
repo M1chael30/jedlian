@@ -4,6 +4,7 @@ import CodeOfConduct from "@/components/components-code-of-conduct/code-of-condu
 import CorporateGovernanceHeader from "@/components/corporate-governance-header";
 import bannerCorporateGovernance from "@/public/images/banners/bannerCorporateGovernance.png";
 import Image from "next/image";
+import CorporateValuesMobile from "@/components/components-corporate-values-section/corporate-values-mobile";
 
 export default function CorporateGovernance() {
  return (
@@ -15,11 +16,12 @@ export default function CorporateGovernance() {
    />
    <MissionVision />
    <div className="flex items-center md:justify-center">
-    <h1 className="text-title font-extrabold">
+    <h1 className="text-title font-extrabold mt-5">
      CORPORATE VALUES
     </h1>
    </div>
    <CorporateValues />
+   <CorporateValuesMobile/>
    {/* <CodeOfConduct /> */}
   </div>
  );
