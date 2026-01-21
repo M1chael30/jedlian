@@ -4,8 +4,7 @@ export default function CorporateValuesButton({ children, onClick, customClassNa
   return (
     <button
       className={` rounded-full
-                    w-20 h-20
-                    md:w-30 md:h-30
+                    w-30 h-30
                     flex justify-center items-center
                     hover:bg-yellow-400 duration-500
                     ${customClassName} lg:w-40 lg:h-40
