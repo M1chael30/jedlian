@@ -15,13 +15,13 @@ export default function CorporateGovernance() {
     className="w-full h-auto max-w-full object-contain"
    />
    <MissionVision />
-   <div className="flex items-center md:justify-center">
+   <div className="flex flex-col items-center md:justify-center min-h-170">
     <h1 className="text-title font-extrabold text-center">
      CORPORATE VALUES
     </h1>
-   </div>
    <CorporateValues />
    <CorporateValuesMobile/>
+   </div>
    {/* <CodeOfConduct /> */}
   </div>
  );
