@@ -23,12 +23,29 @@ export default function CorporateValues() {
   return () => document.removeEventListener("mousedown", handleClickOutside);
  }, []);
 
-  return (
-    <section className="md:flex flex-col py-10 hidden">
-
-      <div
-        ref={containerRef}
-        className="flex flex-col md:flex-row md:h-auto items-center lg:h-auto md:w-200 lg:w-250"
+ return (
+  <section className="flex flex-col mt-12">
+   <div
+    ref={containerRef}
+    className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"
+   >
+    <div className="flex-wrap gap-5 justify-center md:flex hidden">
+     {corporateValuesButtonsData.map((item, index) => (
+      <CorporateValuesButton
+       key={index}
+       customClassName={
+        expand && active === index
+         ? "bg-gradient-to-b from-amber-400 to-yellow-100 scale-115"
+         : " bg-gradient-to-b from-yellow-600 to-yellow-200"
+       }
+       onClick={() => {
+        if (active === index) {
+         setExpand((prev) => !prev);
+        } else {
+         setActive(index);
+         setExpand(true);
+        }
+       }}
       >
        {item.id}
       </CorporateValuesButton>
