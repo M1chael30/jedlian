@@ -15,9 +15,9 @@ export default function CorporateGovernance() {
     className="w-full h-auto max-w-full object-contain"
    />
    <MissionVision />
-   <div className="min-h-180 flex flex-col justify-center items-center">
+   <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
 
-   <div className="flex items-center md:justify-center">
+   <div className="flex flex-col items-center md:justify-center">
     <h1 className="text-title font-extrabold mt-5 text-center">
      CORPORATE VALUES
     </h1>
