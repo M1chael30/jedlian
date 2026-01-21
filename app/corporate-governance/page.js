@@ -21,11 +21,11 @@ export default function CorporateGovernance() {
     <h1 className="text-title font-extrabold mt-5 text-center">
      CORPORATE VALUES
     </h1>
-   </div>
    <CorporateValues />
    <CorporateValuesMobile/>
    </div>
    {/* <CodeOfConduct /> */}
+  </div>
   </div>
  );
 }
