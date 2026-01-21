@@ -16,11 +16,13 @@ export default function ContentSection({ item }) {
      {item?.descriptionTwo}
     </p>
     {/* button  */}
-    <CustomButton
-     icon={<ArrowRight size={18} />}
-     buttonText="Learn more about casa"
-     buttonHref="#"
-    />
+    {item?.socials && (
+     <CustomButton
+      icon={<ArrowRight size={18} />}
+      buttonText="Learn more about casa"
+      buttonHref="/casa"
+     />
+    )}
    </div>
    {/* mid section */}
    <div className="space-y-2">
