@@ -1,15 +1,9 @@
-import { EmptyComponent } from "@/components/empty-component";
-import { Rocket } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
+import AchievementsTopSection from "@/components/components-achievements-page/achievements-top-section";
 
 export default function Achievements() {
  return (
-  <EmptyComponent
-   emptyMediaIcon={<Rocket className="animate-bounce" />}
-   emptyTitle="Page Under Development"
-   emptyDescription="This page is currently under development. Please check back soon."
-   emptyContentTitle="Go back home"
-   emptyContentIcon={<ArrowLeft />}
-  />
+  <section className="mx-auto w-full max-w-7xl">
+   <AchievementsTopSection />
+  </section>
  );
 }
