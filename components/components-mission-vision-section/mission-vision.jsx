@@ -8,7 +8,7 @@ export default function MissionVision() {
     <section
       className="
         grid grid-cols-1 md:grid-cols-2
-     gap-5 px-10 justify-center items-center
+     md:gap-5 gap-10 px-10 justify-center items-center
      text-center"
     >
       <div>
