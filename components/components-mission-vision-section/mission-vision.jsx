@@ -11,14 +11,14 @@ export default function MissionVision() {
    <MissionVisionWidget
     title={missionVisionData[0].title}
     description={missionVisionData[0].description}
-    customClassName="bg-zinc-300 w-full max-w-md"
+    customClassName="bg-zinc-300/50 w-full max-w-md"
     type="mission"
    />
 
    <MissionVisionWidget
     title={missionVisionData[1].title}
     description={missionVisionData[1].description}
-    customClassName="bg-amber-300 w-full max-w-md"
+    customClassName="bg-amber-300/70 w-full max-w-md"
     type="vision"
    />
   </section>

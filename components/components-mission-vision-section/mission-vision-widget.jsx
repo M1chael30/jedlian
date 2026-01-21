@@ -15,7 +15,7 @@ export default function MissionVisionWidget({
         rounded-3xl sm:rounded-4xl
         p-10 w-full h-60 lg:w-full
         md:h-80 md:w-80
-        text-black border-white border-2
+         border-white border-2
         ${customClassName}
       `}
   >
