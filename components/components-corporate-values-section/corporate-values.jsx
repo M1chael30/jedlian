@@ -5,6 +5,8 @@ import CorporateValuesButton from "./corporate-values-button";
 import { corporateValuesButtonsData } from "@/lib/corporateGovernanceData";
 import CorporateValuesContent from "./corporate-values-content";
 
+
+
 export default function CorporateValues() {
  const [active, setActive] = useState(0);
  const [expand, setExpand] = useState(false);
@@ -24,7 +26,7 @@ export default function CorporateValues() {
  }, []);
 
  return (
-  <section className="flex flex-col mt-12">
+  <section className="hidden flex-col mt-12 md:flex">
    <div
     ref={containerRef}
     className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"

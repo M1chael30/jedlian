@@ -1,0 +1,47 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import CorporateValuesButton from "./corporate-values-button";
+import { corporateValuesButtonsData } from "@/lib/corporateGovernanceData";
+import CorporateValuesContent from "./corporate-values-content";
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import CorporateValuestitle from "./corporate-values-title";
+
+export default function CorporateValuesMobile() {
+  return (
+    <section className="visible md:hidden my-10">
+      <Carousel className="w-55 h-60 visible md:hidden">
+        <CarouselContent>
+          {corporateValuesButtonsData.map((item, index) => (
+            <CarouselItem key={index} className="">
+              <div className=" flex flex-col items-center justify-center gap-5 h-70">
+                <CorporateValuesButton
+                  key={index}
+                  customClassName={
+                    "bg-gradient-to-b from-amber-400 to-yellow-100"
+                  }
+                >
+                  {item.id}
+                </CorporateValuesButton>
+                <div className="text-center">
+                  <CorporateValuestitle customClassName={`font-bold text-yellow-400`}>{item.title}</CorporateValuestitle>
+                  <p className="text-description h-20">{item.description}</p>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </section>
+  );
+}
