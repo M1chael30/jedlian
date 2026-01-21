@@ -21,7 +21,7 @@ export default function CorporateGovernance() {
         </h1>
       </div>
    <CorporateValues />
-   <CodeOfConduct />
+   {/* <CodeOfConduct /> */}
   </div>
  );
 }

@@ -24,16 +24,11 @@ export default function CorporateValues() {
   }, []);
 
   return (
-    <section className="flex flex-col py-20">
-      {/* <div className="flex items-center py-5 md:justify-center ">
-        <h1 className="text-xl md:text-4xl lg:text-6xl font-extrabold">
-          CORPORATE VALUES
-        </h1>
-      </div> */}
+    <section className="md:flex flex-col py-10 hidden">
 
       <div
         ref={containerRef}
-        className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"
+        className="flex flex-col md:flex-row md:h-auto items-center lg:h-auto md:w-200 lg:w-250"
       >
         <div className="flex-wrap gap-5 justify-center md:flex hidden">
           {corporateValuesButtonsData.map((item, index) => (

@@ -4,7 +4,7 @@ import { useRef, useState, useLayoutEffect } from "react";
 
 export default function CorporateValuesContent({ objects, item, expand }) {
   return (
-    <motion.div className="flex flex-col gap-2">
+    <motion.div className="flex flex-col gap-3 ">
       {objects.map((obj, index) => {
         const isActive = item.id === index && expand;
         const contentRef = useRef(null);
@@ -38,7 +38,7 @@ export default function CorporateValuesContent({ objects, item, expand }) {
                     height: { duration: 0.35, ease: "easeInOut" },
                     opacity: { duration: 0.35, ease: "easeInOut" },
                   }}
-                  className="overflow-hidden p-1 w-70 mb-3 text-lg"
+                  className="overflow-hidden w-70 text-lg"
                 >
                   <div ref={contentRef}>{item.description}</div>
                 </motion.div>
