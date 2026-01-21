@@ -18,7 +18,7 @@ import CorporateValuestitle from "./corporate-values-title";
 export default function CorporateValuesMobile() {
   return (
     <section className="visible md:hidden my-10">
-      <Carousel className="w-55 h-60 visible md:hidden">
+      <Carousel className="w-55 h-auto visible md:hidden">
         <CarouselContent>
           {corporateValuesButtonsData.map((item, index) => (
             <CarouselItem key={index} className="">
