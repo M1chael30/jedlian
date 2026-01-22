@@ -20,7 +20,7 @@ export default function ContentSection({ item }) {
     className="flex flex-col gap-14 md:flex-row md:justify-between w-full max-w-7xl mx-auto"
    >
     {/* Image */}
-    <motion.div variants={imageVariants} className="w-full md:w-1/2">
+    <motion.div variants={fadeRightVariants} className="w-full md:w-1/2">
      <Image src={item.img} alt={item.alt} className="object-cover rounded-xl" />
     </motion.div>
 
