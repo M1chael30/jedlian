@@ -29,7 +29,7 @@ export default function Questions() {
        </motion.p>
       </AccordionTrigger>
       <AccordionContent className="flex flex-col gap-4 text-balance">
-       <motion className="text-description">{item.answer}</motion>
+       <motion.p className="text-description">{item.answer}</motion.p>
       </AccordionContent>
      </AccordionItem>
     ))}
