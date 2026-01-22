@@ -19,7 +19,7 @@ export default function Questions() {
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger>
               <motion.p
-                className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
+                className="bg-[radial-gradient(circle_at_75%,#c89116,#cfceaa)]
       text-transparent bg-clip-text font-extrabold text-description"
               >
                 {item.question}

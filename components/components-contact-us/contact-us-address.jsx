@@ -30,8 +30,8 @@ export default function ContactUsAddress() {
         className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
            text-transparent bg-clip-text flex items-center gap-2 justify-center "
       >
-        <FaMapMarkerAlt className="text-[#c89116]" />
-        <p className="text-description">{contactsData.address}</p>
+        <FaMapMarkerAlt className="text-[#c89116] text-xl hidden md:flex" />
+        <p className="text-description text-center md:text-left">{contactsData.address}</p>
       </motion.div>
     </motion.div>
   );
