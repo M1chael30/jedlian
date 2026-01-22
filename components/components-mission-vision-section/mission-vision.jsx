@@ -1,3 +1,4 @@
+"use client"
 import { missionVisionData } from "@/lib/corporateGovernanceData";
 import MissionVisionWidget from "./mission-vision-widget";
 
