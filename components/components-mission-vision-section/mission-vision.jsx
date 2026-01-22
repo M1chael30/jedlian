@@ -1,7 +1,5 @@
 import { missionVisionData } from "@/lib/corporateGovernanceData";
 import MissionVisionWidget from "./mission-vision-widget";
-import { PiTargetFill } from "react-icons/pi";
-import { BsEyeFill } from "react-icons/bs";
 
 export default function MissionVision() {
   return (
@@ -11,24 +9,10 @@ export default function MissionVision() {
      md:gap-5 gap-10 px-10 justify-center items-center
      text-center"
     >
-      <div className="border-1 border-yellow-400 rounded-4xl p-10">
-        <div className="flex flex-col items-center">
-          <PiTargetFill className="text-7xl md:text-9xl text-yellow-400" />
-          <h1 className="uppercase text-title text-yellow-400">
-            {missionVisionData[0].title}
-          </h1>
-        </div>
-        <p className="text-description">{missionVisionData[0].description}</p>
-      </div>
-      <div className="border-1 border-yellow-400 rounded-4xl p-10">
-        <div className="flex flex-col items-center">
-          <BsEyeFill className="text-7xl md:text-9xl text-yellow-400" />
-          <h1 className="uppercase text-title text-yellow-400">
-            {missionVisionData[1].title}
-          </h1>
-        </div>
-        <p className="text-description">{missionVisionData[1].description}</p>
-      </div>
+      {missionVisionData.map((item, index)=>(
+      <MissionVisionWidget key={index} title={item.title}
+      description={item.description} icon={item.icon}/>
+      ))}
     </section>
   );
 }
