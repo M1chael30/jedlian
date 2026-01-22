@@ -1,5 +1,3 @@
-import MissionVisionCircles from "./mission-vision-circles";
-
 export default function MissionVisionWidget({
  title,
  description,
