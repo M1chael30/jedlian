@@ -1,20 +1,34 @@
 import Link from "next/link";
 import CustomButton from "../ui/custom-button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { itemVariants, sectionVariants } from "@/lib/animations";
 
 export default function ContentSection({ item }) {
  return (
-  <div className="p-6 md:p-18 lg:px-48 lg:py-20 space-y-12 flex flex-col">
+  <motion.div
+   variants={sectionVariants}
+   initial="hidden"
+   whileInView="show"
+   viewport={{ once: true, amount: 0.3 }}
+   className="p-6 md:p-18 lg:px-48 lg:py-20 space-y-12 flex flex-col"
+  >
    {/* top section */}
    <div>
     {/* title */}
-    <h1 className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title">
+    <motion.h1
+     variants={itemVariants}
+     className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
+    >
      {item?.title}
-    </h1>
+    </motion.h1>
     {/* description */}
-    <p className="text-description text-justify mb-10">
+    <motion.p
+     variants={itemVariants}
+     className="text-description text-justify mb-10"
+    >
      {item?.descriptionTwo}
-    </p>
+    </motion.p>
     {/* button  */}
     {item?.title === "Casa Jedliana" && (
      <CustomButton
@@ -27,26 +41,34 @@ export default function ContentSection({ item }) {
    {/* mid section */}
    <div className="space-y-2">
     {/* title */}
-    <h1 className="font-bold text-subtitle">{item?.titleTwo}</h1>
+    <motion.h1 variants={itemVariants} className="font-bold text-subtitle">
+     {item?.titleTwo}
+    </motion.h1>
     {/* description */}
-    <p className="text-description text-justify">{item?.descriptionThree}</p>
+    <motion.p variants={itemVariants} className="text-description text-justify">
+     {item?.descriptionThree}
+    </motion.p>
    </div>
    {/* bottom section */}
    <div className="space-y-2">
     {/* title */}
-    <h1 className="font-bold text-subtitle">{item?.titleThree}</h1>
+    <motion.h1 variants={itemVariants} className="font-bold text-subtitle">
+     {item?.titleThree}
+    </motion.h1>
     {/* description */}
-    <p className="text-description text-justify">{item?.descriptionFour}</p>
+    <motion.p variants={itemVariants} className="text-description text-justify">
+     {item?.descriptionFour}
+    </motion.p>
    </div>
    {/* icon */}
-   <div className="flex space-x-4">
+   <motion.div variants={itemVariants} className="flex space-x-4">
     {item?.socials &&
      item.socials.map((item, index) => (
       <Link href={item.socialLink} key={index}>
        <item.icon size={32} />
       </Link>
      ))}
-   </div>
-  </div>
+   </motion.div>
+  </motion.div>
  );
 }

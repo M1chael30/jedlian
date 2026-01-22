@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import CorporateValuesButton from "./corporate-values-button";
 import { corporateValuesButtonsData } from "@/lib/corporateGovernanceData";
 import CorporateValuesContent from "./corporate-values-content";
+import Image from "next/image";
 
 
 
@@ -49,7 +50,7 @@ export default function CorporateValues() {
         }
        }}
       >
-       {item.id}
+        <Image src={item.logo} alt="logo" className="w-20 h-20 md:w-25 md:h-25"/>
       </CorporateValuesButton>
      ))}
     </div>

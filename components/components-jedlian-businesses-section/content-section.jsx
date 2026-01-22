@@ -1,5 +1,5 @@
 import {
- contentVariants,
+ fadeRightVariants,
  imageVariants,
  sectionVariants,
 } from "@/lib/animations";
@@ -26,18 +26,18 @@ export default function ContentSection({ item }) {
 
     {/* Content */}
     <div className="w-full md:w-1/2 space-y-4">
-     <motion.h1 variants={contentVariants} className="text-title font-bold">
+     <motion.h1 variants={fadeRightVariants} className="text-title font-bold">
       {item.title}
      </motion.h1>
 
      <motion.p
-      variants={contentVariants}
+      variants={fadeRightVariants}
       className="text-description text-muted-foreground"
      >
       {item.description}
      </motion.p>
 
-     <motion.div variants={contentVariants}>
+     <motion.div variants={fadeRightVariants}>
       <CustomButton
        icon={<ArrowRight size={18} />}
        buttonHref={item.path}

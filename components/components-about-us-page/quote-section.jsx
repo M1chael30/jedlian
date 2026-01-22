@@ -5,8 +5,8 @@ export default function QuoteSection() {
   return (
     <section className="relative flex flex-col items-center justify-center gap-10">
       <div className="md:m-20 border-2 border-white p-10">
-        <h1 className="text-[clamp(1rem,5vw,2.9rem)] text-center font-extrabold uppercase md:mb-10">
-          "{quotesData.quote}."
+        <h1 className="text-[clamp(1rem,5vw,2.5rem)] text-center font-extrabold uppercase md:mb-10 font-serif">
+          "The power of dreams can be reached when <span className="text-title">one</span>  has the courage to pursue them."
         </h1>
         <div className="hidden md:flex h-100"/>
         </div>
