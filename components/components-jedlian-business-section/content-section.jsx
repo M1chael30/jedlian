@@ -30,13 +30,13 @@ export default function ContentSection({ item }) {
      {item?.descriptionTwo}
     </motion.p>
     {/* button  */}
-    <motion.div variants={itemVariants}>
+    {item?.title === "Casa Jedliana" && (
      <CustomButton
       icon={<ArrowRight size={18} />}
       buttonText="Learn more about casa"
-      buttonHref="#"
+      buttonHref="/casa"
      />
-    </motion.div>
+    )}
    </div>
    {/* mid section */}
    <div className="space-y-2">
