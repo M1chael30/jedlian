@@ -1,7 +1,11 @@
+"use client";
+
 import ContactUsSection from "@/components/components-contact-us/contact-us-section";
 import FaqSection from "@/components/components-contact-us/faq-section";
 import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { itemVariants, sectionVariants } from "@/lib/animations";
 
 export default function ContactUs() {
  return (
@@ -13,17 +17,27 @@ export default function ContactUs() {
     alt="Business page background image"
     className="object-cover"
    />
-   <div className="relative z-10 w-full">
-    <h1
+   <motion.div
+    variants={sectionVariants}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.3 }}
+    className="relative z-10 w-full"
+   >
+    <motion.h1
+     variants={itemVariants}
      className="text-title bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
              text-transparent bg-clip-text "
     >
      Contact Us
-    </h1>
-    <div className="h-1 my-4 w-full bg-[#c89116]" />
+    </motion.h1>
+    <motion.div
+     variants={itemVariants}
+     className="h-1 my-4 w-full bg-[#c89116]"
+    />
     <ContactUsSection />
     <FaqSection />
-   </div>
+   </motion.div>
   </div>
  );
 }
