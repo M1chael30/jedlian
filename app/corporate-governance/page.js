@@ -1,3 +1,5 @@
+"use client"
+
 import CorporateValues from "@/components/components-corporate-values-section/corporate-values";
 import MissionVision from "@/components/components-mission-vision-section/mission-vision";
 import CodeOfConduct from "@/components/components-code-of-conduct/code-of-conduct";
@@ -6,14 +8,22 @@ import bannerCorporateGovernance from "@/public/images/banners/bannerCorporateGo
 import Image from "next/image";
 import CorporateValuesMobile from "@/components/components-corporate-values-section/corporate-values-mobile";
 
+import { motion } from "motion/react";
+
 export default function CorporateGovernance() {
   return (
     <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
-      <Image
-        src={bannerCorporateGovernance}
-        alt="Jedlian landing page image"
-        className="w-full h-auto max-w-full object-contain"
-      />
+      <motion.div
+        initial={{x:-100, opacity:0 }}
+        animate={{x:0, opacity: 1, transition: {duration:1}}}
+        className="w-full"
+      >
+        <Image
+          src={bannerCorporateGovernance}
+          alt="Jedlian landing page image"
+          className="w-full h-auto max-w-full object-contain"
+        />
+      </motion.div>
       <MissionVision />
       <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
         <div className="flex flex-col items-center md:justify-center">

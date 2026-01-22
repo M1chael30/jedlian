@@ -1,4 +1,5 @@
 "use client";
+import { itemVariants, missionVisionVariants } from "@/lib/animations";
 import { motion } from "motion/react";
 
 export default function MissionVisionWidget({
@@ -8,9 +9,9 @@ export default function MissionVisionWidget({
 }) {
   return (
     <motion.div
-      inital={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
-      animate={{ transition: { duration: 2 } }}
+      // initial={{ opacity: 0, y: 20 }}
+      // animate={{ opacity: 1, transition: {duration:1}, y:0 }}
+      variants={missionVisionVariants}
       className="border border-yellow-400 rounded-4xl p-10"
     >
       <div className="flex flex-col items-center">
