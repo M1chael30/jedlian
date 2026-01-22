@@ -11,10 +11,6 @@ import { motion } from "framer-motion";
 export default function Questions() {
  return (
   <motion.div
-   variants={sectionVariants}
-   initial="hidden"
-   whileInView="show"
-   viewport={{ once: true, amount: 0.3 }}
   >
    <Accordion type="single" collapsible className="w-full" defaultValue="">
     {faqData.map((item, index) => (
@@ -23,7 +19,6 @@ export default function Questions() {
        <motion.p
         className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
       text-transparent bg-clip-text font-extrabold text-description"
-        variants={itemVariants}
        >
         {item.question}
        </motion.p>
