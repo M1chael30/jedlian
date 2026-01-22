@@ -3,7 +3,13 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactUsAddress() {
  return (
+<<<<<<< Updated upstream
   <div className="space-y-4 md:w-1/2 w-full">
+=======
+  <div
+   className="space-y-4 md:w-1/2 w-full"
+  >
+>>>>>>> Stashed changes
    <div className="h-60 md:h-full">
     <iframe
      src={contactsData.mapsLink}

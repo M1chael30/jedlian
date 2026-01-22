@@ -13,14 +13,29 @@ export default function ContactUs() {
     alt="Business page background image"
     className="object-cover"
    />
+<<<<<<< Updated upstream
    <div className="relative z-10 w-full">
     <h1
+=======
+   <div
+    className="relative z-10 w-full"
+   >
+    <h1
+     variants={itemVariants}
+>>>>>>> Stashed changes
      className="text-title bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
              text-transparent bg-clip-text "
     >
      Contact Us
     </h1>
+<<<<<<< Updated upstream
     <div className="h-1 my-4 w-full bg-[#c89116]" />
+=======
+    <div
+     variants={itemVariants}
+     className="h-1 my-4 w-full bg-[#c89116]"
+    />
+>>>>>>> Stashed changes
     <ContactUsSection />
     <FaqSection />
    </div>
