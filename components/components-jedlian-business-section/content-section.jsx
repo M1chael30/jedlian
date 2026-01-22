@@ -16,7 +16,7 @@ export default function ContentSection({ item }) {
      {item?.descriptionTwo}
     </p>
     {/* button  */}
-    {item?.socials && (
+    {item?.title === "Casa Jedliana" && (
      <CustomButton
       icon={<ArrowRight size={18} />}
       buttonText="Learn more about casa"
