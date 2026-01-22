@@ -18,7 +18,7 @@ export default function ContentSection({ item }) {
     {/* title */}
     <motion.h1
      variants={itemVariants}
-     className="py-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
+     className="pb-2 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title max-w-[15ch]"
     >
      {item?.title}
     </motion.h1>

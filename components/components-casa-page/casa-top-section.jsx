@@ -1,12 +1,15 @@
+"use client";
+import Image from "next/image";
 import { casaInformation } from "@/lib/casaData";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import casaJedlianaHeroImg from "@/public/images/casa/casaJedlianaHeroImg.jpg";
 
 export default function CasaTopSection() {
  return (
   <div className="flex items-center justify-center overflow-hidden">
-   <div className="grid lg:grid-cols-2 gap-12 px-6 py-10 lg:py-0">
-    <div className="my-auto">
+   <div className="flex flex-col md:flex-row-reverse px-4 gap-14 py-8 lg:py-0 lg:px-0">
+    <div className="my-auto lg:py-8 lg:pr-10 lg:w-1/2">
      <p className="max-w-[60ch] text-lg text-[#45291f] font-semibold">
       _Jedlian Holdings Inc.
      </p>
@@ -30,9 +33,15 @@ export default function CasaTopSection() {
       Book here <ArrowRight />
      </Button>
     </div>
-    <div className="w-full aspect-video lg:w-250 lg:rounded-none flex">
-     <div className="bg-accent flex-6 rounded-xl lg:rounded-none" />
-     <div className="bg-[#ca9c57] flex-5 hidden lg:block" />
+    <div className="flex md:w-90 lg:w-1/2">
+     <div className="bg-[#ca9c57] h-full hidden lg:block w-16" />
+     <div className="overflow-hidden">
+      <Image
+       src={casaJedlianaHeroImg}
+       alt="Casa jedliana hero img"
+       className="h-full max-w-full object-cotain rounded-xl lg:rounded-none"
+      />
+     </div>
     </div>
    </div>
   </div>

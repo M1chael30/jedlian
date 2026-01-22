@@ -26,7 +26,10 @@ export default function ContentSection({ item }) {
 
     {/* Content */}
     <div className="w-full md:w-1/2 space-y-4">
-     <motion.h1 variants={fadeRightVariants} className="text-title font-bold">
+     <motion.h1
+      variants={fadeRightVariants}
+      className="text-title font-bold max-w-[15ch]"
+     >
       {item.title}
      </motion.h1>
 
