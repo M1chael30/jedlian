@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-import MissionVisionCircles from "./mission-vision-circles";
-=======
 "use client";
 import { motion } from "motion/react";
->>>>>>> Stashed changes
 
 export default function MissionVisionWidget({
   title,
