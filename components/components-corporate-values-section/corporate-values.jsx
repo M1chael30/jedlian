@@ -6,60 +6,70 @@ import { corporateValuesButtonsData } from "@/lib/corporateGovernanceData";
 import CorporateValuesContent from "./corporate-values-content";
 import Image from "next/image";
 
-
+import { containerVariants } from "@/lib/animations";
+import { motion } from "motion/react";
 
 export default function CorporateValues() {
- const [active, setActive] = useState(0);
- const [expand, setExpand] = useState(false);
- const containerRef = useRef(null);
+  const [active, setActive] = useState(0);
+  const [expand, setExpand] = useState(false);
+  const containerRef = useRef(null);
 
- const activeItem = corporateValuesButtonsData[active];
+  const activeItem = corporateValuesButtonsData[active];
 
- useEffect(() => {
-  function handleClickOutside(e) {
-   if (containerRef.current && !containerRef.current.contains(e.target)) {
-    setExpand(false);
-   }
-  }
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setExpand(false);
+      }
+    }
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => document.removeEventListener("mousedown", handleClickOutside);
- }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
- return (
-  <section className="hidden flex-col mt-12 md:flex">
-   <div
-    ref={containerRef}
-    className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"
-   >
-    <div className="flex-wrap gap-5 justify-center md:flex hidden">
-     {corporateValuesButtonsData.map((item, index) => (
-      <CorporateValuesButton
-       key={index}
-       customClassName={
-        expand && active === index
-         ? "bg-gradient-to-b from-amber-400 to-yellow-100 scale-115"
-         : " bg-gradient-to-b from-yellow-600 to-yellow-200"
-       }
-       onClick={() => {
-        if (active === index) {
-         setExpand((prev) => !prev);
-        } else {
-         setActive(index);
-         setExpand(true);
-        }
-       }}
+  return (
+    <section className="hidden flex-col mt-12 md:flex">
+      <div
+        ref={containerRef}
+        className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"
       >
-        <Image src={item.logo} alt="logo" className="w-20 h-20 md:w-25 md:h-25"/>
-      </CorporateValuesButton>
-     ))}
-    </div>
-    <CorporateValuesContent
-     objects={corporateValuesButtonsData}
-     item={activeItem}
-     expand={expand}
-    />
-   </div>
-  </section>
- );
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          className="flex-wrap gap-5 justify-center md:flex hidden"
+        >
+          {corporateValuesButtonsData.map((item, index) => (
+            <CorporateValuesButton
+              key={index}
+              customClassName={
+                expand && active === index
+                  ? "bg-gradient-to-b from-amber-400 to-yellow-100 scale-115"
+                  : " bg-gradient-to-b from-yellow-600 to-yellow-200"
+              }
+              onClick={() => {
+                if (active === index) {
+                  setExpand((prev) => !prev);
+                } else {
+                  setActive(index);
+                  setExpand(true);
+                }
+              }}
+            >
+              <Image
+                src={item.logo}
+                alt="logo"
+                className="w-20 h-20 md:w-25 md:h-25"
+              />
+            </CorporateValuesButton>
+          ))}
+        </motion.div>
+        <CorporateValuesContent
+          objects={corporateValuesButtonsData}
+          item={activeItem}
+          expand={expand}
+        />
+      </div>
+    </section>
+  );
 }

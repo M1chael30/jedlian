@@ -1,7 +1,13 @@
+import { corporateValuesVariants } from "@/lib/animations";
+
+import { motion } from "motion/react";
+
 export default function CorporateValuestitle({children, customClassName}) {
     return(
-        <h1 className={`uppercase text-subtitle ${customClassName}`}>
+        <motion.h1
+        variants={corporateValuesVariants}
+        className={`uppercase text-subtitle ${customClassName}`}>
             {children}
-        </h1>
+        </motion.h1>
     )
 }

@@ -1,5 +1,5 @@
 "use client";
-import { itemVariants, missionVisionVariants } from "@/lib/animations";
+import { missionVisionVariants } from "@/lib/animations";
 import { motion } from "motion/react";
 
 export default function MissionVisionWidget({

@@ -1,3 +1,4 @@
+import { containerVariants } from "@/lib/animations";
 import CorporateValuesTitle from "./corporate-values-title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useLayoutEffect } from "react";
@@ -17,7 +18,11 @@ export default function CorporateValuesContent({ objects, item, expand }) {
 
         return (
           <motion.div key={index} className="w-80" layout="position">
-            <motion.div layout>
+            <motion.div layout
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            >
               <CorporateValuesTitle
                 customClassName={
                   isActive
