@@ -7,8 +7,8 @@ import { itemVariants, sectionVariants } from "@/lib/animations";
 export default function ContactUsDetails() {
   return (
     <motion.div
-        initial={{opacity: 0}}
-    animate={{opacity:1, transition: {duration:1.5}}}
+        initial={{opacity: 0, x:-25}}
+    animate={{opacity:1,x:0, transition: {duration:1}}}
 
     className="space-y-5 mb-3 md:mb-0 w-full md:w-1/2">
       <motion.p className="text-description">

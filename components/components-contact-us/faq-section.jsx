@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function FaqSection() {
   return (
-    <motion.section className="w-full my-18">
+    <motion.section className="w-full my-10">
       <div>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
