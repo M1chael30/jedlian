@@ -17,27 +17,17 @@ export default function ContactUs() {
     alt="Business page background image"
     className="object-cover"
    />
-   <motion.div
-    variants={sectionVariants}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true, amount: 0.3 }}
-    className="relative z-10 w-full"
-   >
-    <motion.h1
-     variants={itemVariants}
+   <div className="relative z-10 w-full">
+    <h1
      className="text-title bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
              text-transparent bg-clip-text "
     >
      Contact Us
-    </motion.h1>
-    <motion.div
-     variants={itemVariants}
-     className="h-1 my-4 w-full bg-[#c89116]"
-    />
+    </h1>
+    <div className="h-1 my-4 w-full bg-[#c89116]" />
     <ContactUsSection />
     <FaqSection />
-   </motion.div>
+   </div>
   </div>
  );
 }

@@ -6,57 +6,49 @@ import { itemVariants, sectionVariants } from "@/lib/animations";
 
 export default function ContactUsDetails() {
  return (
-  <motion.div
-   variants={sectionVariants}
-   initial="hidden"
-   whileInView="show"
-   viewport={{ once: true, amount: 0.3 }}
-   className="space-y-5 mb-3 md:mb-0 w-full md:w-1/2"
-  >
-   <motion.p variants={itemVariants} className="text-description">
+  <div className="space-y-5 mb-3 md:mb-0 w-full md:w-1/2">
+   <div className="text-[#E9DFDF] text-description">
+    <p>
     {contactsData.description}
-   </motion.p>
+   </p>
    <div className="text-sm flex flex-col gap-2">
     <div className="flex gap-2 items-center">
-     <motion.div
+     <div
       variants={itemVariants}
       className="flex items-center rounded-full p-2 bg-[#cfceaa] text-black text-description"
      >
       <BsTelephone />
-     </motion.div>
-     <motion.p variants={itemVariants} className="text-description">
+     </div>
+     <p variants={itemVariants} className="text-description">
       {contactsData.tel}
-     </motion.p>
+     </p>
     </div>
 
     <div className="flex gap-2 items-center">
-     <motion.div
+     <div
       variants={itemVariants}
       className="flex items-center rounded-full p-2 bg-[#cfceaa] text-black text-description"
      >
       <MdOutlineEmail />
-     </motion.div>
-     <motion.p variants={itemVariants} className="text-description">
+     </div>
+     <p variants={itemVariants} className="text-description">
       {contactsData.email}
-     </motion.p>
+     </p>
     </div>
    </div>
    <div className="space-y-2">
-    <motion.h1
+    <h1
      variants={itemVariants}
      className="font-extrabold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] text-transparent bg-clip-text text-subtitle"
     >
      Business Hours
-    </motion.h1>
+    </h1>
     <div>
-     <motion.p variants={itemVariants} className="text-description">
-      {contactsData.day}
-     </motion.p>
-     <motion.p variants={itemVariants} className="text-description">
-      {contactsData.hours}
-     </motion.p>
+     <p className="text-description">{contactsData.day}</p>
+     <p className="text-description">{contactsData.hours}</p>
     </div>
    </div>
-  </motion.div>
+  </div>
+  </div>
  );
 }
