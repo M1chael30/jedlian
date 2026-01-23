@@ -15,7 +15,7 @@ export default function CorporateGovernance() {
   return (
     <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ opacity: 0 }}
         animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
         className="w-full"
       >
