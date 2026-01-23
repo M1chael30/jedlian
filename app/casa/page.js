@@ -1,5 +1,6 @@
 import CasaAmenitiesSection from "@/components/components-casa-page/casa-amenities-section";
 import CasaClassificationSection from "@/components/components-casa-page/casa-classification-section";
+import CasaInclusionsSection from "@/components/components-casa-page/casa-inclusions-section";
 import CasaTopSection from "@/components/components-casa-page/casa-top-section";
 
 export default function Casa() {
@@ -9,6 +10,7 @@ export default function Casa() {
     <CasaTopSection />
     <CasaClassificationSection />
     <CasaAmenitiesSection />
+    <CasaInclusionsSection />
    </div>
   </section>
  );

@@ -53,12 +53,14 @@ export default function CasaClassificationSection() {
           <div className="z-10 relative flex items-center h-full md:px-12 px-2 flex-col lg:pt-14 xl:pt-10">
            <Image
             src={item.img}
-            alt="bg image"
+            alt={item.title}
             className="rounded-xl aspect-video"
            />
            {/* title and description */}
            <div className="w-full lg:absolute lg:bottom-10 text-center mt-3 lg:mt-0">
-            <h1 className="text-[#45291f] text-xl md:text-4xl font-bold">{item.title}</h1>
+            <h1 className="text-[#45291f] text-xl md:text-4xl font-bold">
+             {item.title}
+            </h1>
             <p className="text-xs md:text-sm font-semibold text-[#45291f] max-w-[50ch] mx-auto">
              {item.description}
             </p>
