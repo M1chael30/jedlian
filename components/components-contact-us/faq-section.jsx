@@ -7,8 +7,8 @@ export default function FaqSection() {
     <motion.section className="w-full my-20">
       <div>
         <motion.div
-          initial={{ opacity: 0,}}
-          whileInView={{ opacity: 1, transition: { duration: 1 } }}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
           className=""
         >
           <motion.h1 className="font-extrabold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] text-transparent bg-clip-text text-title">

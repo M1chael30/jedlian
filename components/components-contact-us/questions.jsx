@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { containerVariants, fadeRightVariants, fadeLeftVariants} from "@/lib/animations";
+import { containerVariants, fadeRightVariants, fadeLeftVariants, fadeVariants} from "@/lib/animations";
 import { faqData } from "@/lib/contactUsData";
 import { motion } from "framer-motion";
 
@@ -20,7 +20,7 @@ export default function Questions() {
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger>
               <motion.p
-                      variants={fadeRightVariants}
+                      variants={fadeVariants}
                 className="bg-[radial-gradient(circle_at_75%,#c89116,#cfceaa)]
       text-transparent bg-clip-text font-extrabold text-description"
               >
