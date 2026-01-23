@@ -16,7 +16,7 @@ export default function ContentSection({ item }) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="p-5 md:p-18 lg:px-48 lg:py-10 space-y-12 flex flex-col"
+      className="p-6 md:p-18 lg:px-48 lg:py-5 space-y-12 flex flex-col"
     >
       {/* top section */}
       <div>
@@ -25,7 +25,7 @@ export default function ContentSection({ item }) {
           variants={fadeRightVariants}
           initial="hidden"
           animate="show"
-          className="pb-12 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
+          className="py-15 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
         >
           {item?.title}
         </motion.h1>
@@ -34,7 +34,7 @@ export default function ContentSection({ item }) {
           variants={fadeVariants}
           initial="hidden"
           whileInView="show"
-          className="text-description text-justify mb-10"
+          className="text-description text-justify mb-5"
         >
           {item?.descriptionTwo}
         </motion.p>

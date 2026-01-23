@@ -52,7 +52,7 @@ export default function Business() {
    />
 
    {/* top section */}
-   <div className="relative z-10 flex flex-col gap-10">
+   <div className="relative z-10 flex flex-col">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
     {content}

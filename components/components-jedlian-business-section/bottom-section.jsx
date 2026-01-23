@@ -21,7 +21,7 @@ export default function BottomSection({ items }) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="p-6 md:p-18 lg:px-48 lg:py-10 space-y-8 w-full"
+      className="p-6 md:p-18 lg:px-48 lg:py-5 space-y-8 w-full"
     >
       {/* title */}
       <motion.h1
