@@ -16,7 +16,7 @@ export default function ContentSection({ item }) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="p-6 md:p-18 lg:px-48 lg:py-10 space-y-12 flex flex-col"
+      className="p-5 md:p-18 lg:px-48 lg:py-10 space-y-12 flex flex-col"
     >
       {/* top section */}
       <div>
