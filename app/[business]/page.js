@@ -13,6 +13,8 @@ import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.p
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
+import { motion } from "motion/react";
+
 export default function Business() {
  const params = useParams();
  let data;
@@ -50,7 +52,7 @@ export default function Business() {
    />
 
    {/* top section */}
-   <div className="relative z-10 flex flex-col">
+   <div className="relative z-10 flex flex-col gap-10">
     <TopSection imgBanner={item?.imgBanner} imgCircle={item?.imgCircleBanner} />
     <ContentSection item={item} />
     {content}
