@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function FaqSection() {
   return (
-    <motion.section className="w-full my-10">
+    <motion.section className="w-full my-20">
       <div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
           className=""
         >

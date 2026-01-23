@@ -22,7 +22,7 @@ export default function ContactUs() {
    >
 
     <motion.h1
-    initial={{opacity: 0, x: -50}}
+    initial={{opacity: 0, x: 50}}
     animate={{opacity:1, x:0, transition: {duration:1}}}
      className="text-title bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
              text-transparent bg-clip-text font-extrabold"

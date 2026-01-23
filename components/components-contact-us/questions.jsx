@@ -4,21 +4,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { itemVariants, sectionVariants } from "@/lib/animations";
+import { containerVariants, fadeRightVariants, fadeLeftVariants} from "@/lib/animations";
 import { faqData } from "@/lib/contactUsData";
 import { motion } from "framer-motion";
 
 export default function Questions() {
   return (
     <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1, transition: {duration:2}}}
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="show"
     >
       <Accordion type="single" collapsible className="w-full" defaultValue="">
         {faqData.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger>
               <motion.p
+                      variants={fadeRightVariants}
                 className="bg-[radial-gradient(circle_at_75%,#c89116,#cfceaa)]
       text-transparent bg-clip-text font-extrabold text-description"
               >
