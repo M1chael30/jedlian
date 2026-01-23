@@ -1,3 +1,4 @@
+import CasaAmenitiesSection from "@/components/components-casa-page/casa-amenities-section";
 import CasaClassificationSection from "@/components/components-casa-page/casa-classification-section";
 import CasaTopSection from "@/components/components-casa-page/casa-top-section";
 
@@ -7,6 +8,7 @@ export default function Casa() {
    <div className="mx-auto w-full max-w-7xl bg-primary">
     <CasaTopSection />
     <CasaClassificationSection />
+    <CasaAmenitiesSection />
    </div>
   </section>
  );
