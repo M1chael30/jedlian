@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
   containerVariants,
   fadeRightVariants,
+  fadeVariants,
   itemVariants,
   sectionVariants,
 } from "@/lib/animations";
@@ -16,7 +17,7 @@ export default function ContactUsAddress() {
       animate="show"
       className="space-y-4 md:w-1/2 w-full"
     >
-      <motion.div variants={fadeRightVariants} className="h-60 md:h-full">
+      <motion.div variants={fadeVariants} className="h-60 md:h-full">
         <iframe
           src={contactsData.mapsLink}
           allowFullScreen=""
@@ -26,7 +27,7 @@ export default function ContactUsAddress() {
         ></iframe>
       </motion.div>
       <motion.div
-        variants={fadeRightVariants}
+        variants={fadeVariants}
         className="bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)]
            text-transparent bg-clip-text flex items-center gap-2 justify-center "
       >
