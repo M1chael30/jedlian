@@ -2,7 +2,7 @@ import bannerCasa from "@/public/images/business-page-img/bannerCasa.png";
 import circleCasaJedliana from "@/public/images/business-page-img/circleCasaJedliana.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { containerVariants, contentVariants } from "@/lib/animations";
+import { containerVariants, contentVariants, fadeVariants } from "@/lib/animations";
 
 export default function TopSection({
  imgBanner = bannerCasa,
@@ -16,7 +16,7 @@ export default function TopSection({
    viewport={{ once: true, amount: 0.3 }}
    className="relative"
   >
-   <motion.div variants={contentVariants}>
+   <motion.div variants={fadeVariants}>
     <Image
      src={imgBanner}
      alt="Banner Casa Jedliana"

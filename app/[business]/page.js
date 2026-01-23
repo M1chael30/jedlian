@@ -13,6 +13,8 @@ import bgBusinessPage from "@/public/images/business-page-img/bg-business-page.p
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
+import { motion } from "motion/react";
+
 export default function Business() {
  const params = useParams();
  let data;
