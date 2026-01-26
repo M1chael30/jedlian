@@ -8,7 +8,7 @@ export default function AboutUs() {
     <main className="max-w-7xl w-full mx-auto">
       <TopSection />
       <LeadersSection/>
-      <div className="w-full bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] h-3 my-5"/>
+      <div className="w-full bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] h-3 mt-10"/>
       <GeoFootPrintSection/>
       <QuoteSection/>
     </main>
