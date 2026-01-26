@@ -8,7 +8,8 @@ export default function FooterTopSection() {
    <img
     src="images/HOLDINGS-LOGO2.png"
     alt=""
-    className="w-70 h-20 aspect-video object-cover hidden md:block"
+    className="w-70 h-20 aspect-video object-cover hidden md:block select-none"
+    draggable="false"
    />
    <FooterList title="Quick Links" list={footerQuickLinks} />
    <FooterList title="Contact Us" list={footerContactUs} />

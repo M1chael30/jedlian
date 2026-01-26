@@ -18,7 +18,8 @@ export default function Nav() {
      <img
       src="images/HOLDINGS-LOGO2.png"
       alt=""
-      className="w-33 h-10 object-cover"
+      className="w-33 h-10 object-cover select-none"
+      draggable="false"
      />
     </Link>
     {/* nav links */}

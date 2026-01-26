@@ -4,9 +4,10 @@ import bannerAchievements from "@/public/images/banners/bannerAchievements.png";
 export default function AchievementsTopSection() {
  return (
   <Image
+  draggable="false"
    src={bannerAchievements}
    alt="Banner Casa Jedliana"
-   className="w-full h-auto max-w-full object-contain"
+   className="w-full h-auto max-w-full object-contain select-none"
   />
  );
 }
