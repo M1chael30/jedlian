@@ -1,3 +1,4 @@
+'use client'
 import AchievementsContentSection from "@/components/components-achievements-page/achievements-content-section";
 import AchievementsTopSection from "@/components/components-achievements-page/achievements-top-section";
 
