@@ -23,7 +23,7 @@ export default function AchievementsContentSection() {
 
             </div>
             <div className="z-0 absolute -mx-25 -my-110">
-            <Image src={achievement.image} alt="achievement" draggable="false" className=" grayscale w-180 h-180  opacity-30" />
+            <Image src={achievement.image} alt="achievement" draggable="false" className=" grayscale w-180 h-180  opacity-30 select-none" />
             </div>
           </div>
           <div>
