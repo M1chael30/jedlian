@@ -13,8 +13,7 @@ export default function MissionVision() {
      text-center"
       variants={containerVariants}
       initial="hidden"
-animate="show"
-
+      animate="show"
     >
       {missionVisionData.map((item, index) => (
         <MissionVisionWidget
