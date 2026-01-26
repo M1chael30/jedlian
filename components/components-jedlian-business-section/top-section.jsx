@@ -18,15 +18,17 @@ export default function TopSection({
   >
    <motion.div variants={fadeVariants}>
     <Image
+    draggable="false"
      src={imgBanner}
      alt="Banner Casa Jedliana"
-     className="w-full h-auto max-w-full object-contain"
+     className="w-full h-auto max-w-full object-contain select-none"
     />
 
     <Image
+    draggable="false"
      src={imgCircle}
      alt="Circle Casa Jedliana"
-     className="absolute top-0 right-0 w-22 md:w-50 object-contain"
+     className="absolute top-0 right-0 w-22 md:w-50 object-contain select-none"
     />
    </motion.div>
   </motion.div>

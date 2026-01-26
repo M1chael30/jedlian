@@ -22,7 +22,8 @@ export default function CorporateGovernance() {
         <Image
           src={bannerCorporateGovernance}
           alt="Jedlian landing page image"
-          className="w-full h-auto max-w-full object-contain"
+          draggable="false"
+          className="w-full h-auto max-w-full object-contain select-none"
         />
       </motion.div>
       <MissionVision />

@@ -57,9 +57,10 @@ export default function CorporateValues() {
               }}
             >
               <Image
+                          draggable="false"
                 src={item.logo}
                 alt="logo"
-                className="w-20 h-20 md:w-25 md:h-25"
+                className="w-20 h-20 md:w-25 md:h-25 select-none"
               />
             </CorporateValuesButton>
           ))}

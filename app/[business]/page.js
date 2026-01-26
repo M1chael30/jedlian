@@ -47,8 +47,9 @@ export default function Business() {
     fill
     priority
     src={bgBusinessPage}
+    draggable="false"
     alt="Business page background image"
-    className="object-cover"
+    className="object-cover select-none"
    />
 
    {/* top section */}

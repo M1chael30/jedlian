@@ -8,10 +8,11 @@ export default function GeoFootPrintSection() {
     <div className='grid py-5 md:grid-cols-2'>
       <div className='flex items-center justify-center'>
       <Image 
+      draggable="false"
       src = {image}
       alt="pilipinas"
       className='
-      w-full h-auto md:w-auto max-w-full object-contain
+      w-full h-auto md:w-auto max-w-full object-contain select-none
       '/>
       </div>
         <div className='flex flex-col justify-center items-center mx-5'>

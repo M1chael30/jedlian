@@ -7,7 +7,8 @@ export default function TopSection() {
    <Image
     src={bannerAboutUs}
     alt="Banner Casa Jedliana"
-    className="w-full h-auto max-w-full object-contain"
+    draggable="false"
+    className="w-full h-auto max-w-full object-contain select-none"
    />
   </div>
  );
