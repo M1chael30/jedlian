@@ -1,11 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import sample from "@/public/images/ceoLabel.png"
+import { motion } from "motion/react";
+import { fadeUpVariants } from "@/lib/animations";
 
 export default function PersonWidget({ image, name, position, content, isReverse, banner }) {
 
   return (
-    <div className={`md:grid-cols-2 items-center justify-center max-w-4xl min-w-70 w-full mx-auto hidden md:grid`}>
+    <motion.div 
+    initial={{opacity:0}}
+    whileInView={{opacity:1, transition: {duration:1.5}}}
+    className={`md:grid-cols-2 items-center justify-center max-w-4xl min-w-70 w-full mx-auto hidden md:grid`}>
       <Image src={image} alt={"boss"} className={`rounded-2xl shadow-xl bg-red-100 h-110 hidden md:flex ${isReverse ? "" : "order-last"} select-none`}  draggable="false" />
       <div>
         {/*Content*/}
@@ -20,6 +25,6 @@ export default function PersonWidget({ image, name, position, content, isReverse
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

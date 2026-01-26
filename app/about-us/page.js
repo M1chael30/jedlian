@@ -1,7 +1,9 @@
+'use client'
 import TopSection from "@/components/components-about-us-page/top-section";
 import LeadersSection from "@/components/components-about-us-page/leaders-section";
 import GeoFootPrintSection from "@/components/components-about-us-page/geo-footprint-section";
 import QuoteSection from "@/components/components-about-us-page/quote-section";
+import { motion } from "motion/react";
 
 export default function AboutUs() {
   return (

@@ -1,16 +1,16 @@
+'use client'
 import React from "react";
 import { companyLeadersData } from "@/lib/aboutUsData";
 import PersonWidget from "./person-widget";
 import PersonWidgetMobile from "./person-widget.mobile";
+import { motion } from "motion/react";
+import { containerVariants } from "@/lib/animations";
 
 export default function LeadersSection() {
-  const reverse = {
-    container: "order-last",
-    content: "md:border-r-0 md:rounded-l-lg md:rounded-none rounded-xl",
-  };
 
   return (
-    <div className="space-y-10 px-10 flex flex-col items-center">
+    <motion.div 
+    className="space-y-10 px-10 flex flex-col items-center">
       {companyLeadersData.map((person, index) => (
         <PersonWidget
           key={index}
@@ -31,6 +31,6 @@ export default function LeadersSection() {
           content={person.textContent}
         />
       ))}
-    </div>
+    </motion.div>
   );
 }
