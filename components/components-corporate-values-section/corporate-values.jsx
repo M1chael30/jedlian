@@ -9,6 +9,9 @@ import Image from "next/image";
 import { containerVariants } from "@/lib/animations";
 import { motion } from "motion/react";
 
+import bgCasa from '@/public/images/bg-casa-jedliana.png'
+
+
 export default function CorporateValues() {
   const [active, setActive] = useState(0);
   const [expand, setExpand] = useState(false);
@@ -28,7 +31,9 @@ export default function CorporateValues() {
   }, []);
 
   return (
-    <section className="hidden flex-col mt-12 md:flex">
+    <section className={`hidden flex-col mt-12 md:flex`}
+    
+    >
       <div
         ref={containerRef}
         className="flex flex-col md:flex-row md:h-100 items-center lg:h-auto md:w-200 lg:w-250"

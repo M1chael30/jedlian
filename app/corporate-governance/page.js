@@ -11,6 +11,8 @@ import CorporateValuesMobile from "@/components/components-corporate-values-sect
 import { motion } from "motion/react";
 import { corporateValuesVariants, itemVariants } from "@/lib/animations";
 
+import bgCasa from '@/public/images/bg-casa-jedliana.png'
+
 export default function CorporateGovernance() {
   return (
     <div className="flex flex-col justify-center items-center mx-auto max-w-7xl w-full">
@@ -28,7 +30,9 @@ export default function CorporateGovernance() {
       </motion.div>
       <MissionVision />
       <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
-        <div className="flex flex-col items-center md:justify-center">
+        <div className={`flex flex-col items-center md:justify-center`} 
+        
+        >
           <motion.h1
             initial={{ opacity: 0, y:20 }}
             whileInView={{ opacity: 1, y: 0, transition: {duration:0.5} }}
