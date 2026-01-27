@@ -6,11 +6,16 @@ import Image from "next/image";
 
 export default function DesktopView() {
   return (
-    <div className="md:block hidden w-full max-w-7xl">
+    <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    whileInView="show"
+    className="md:block hidden w-full max-w-7xl">
       {achievementsData.reverse().map((achievement) => (
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { duration: 1.5 } }}
+        variants={fadeUpVariants}
+        initial="hidden"
+        whileInView="show"
           key={achievement.id}
           className={`flex justify-center items-center gap-5 relative mb-9 min-h-140
          ${achievement.id % 2 == 0 ? "" : "flex-row-reverse"}`}
@@ -49,6 +54,6 @@ export default function DesktopView() {
           </motion.div>
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
