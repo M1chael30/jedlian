@@ -31,7 +31,6 @@ export default function CorporateGovernance() {
       <MissionVision />
       <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
         <div className={`flex flex-col items-center md:justify-center`} 
-        
         >
           <motion.h1
             initial={{ opacity: 0, y:20 }}
