@@ -7,15 +7,16 @@ import Image from "next/image";
 export default function DesktopView() {
   return (
     <motion.div
-    variants={containerVariants}
-    initial="hidden"
-    whileInView="show"
-    className="md:block hidden w-full max-w-7xl">
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      className="md:block hidden w-full max-w-7xl"
+    >
       {achievementsData.reverse().map((achievement) => (
         <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="show"
+          variants={fadeUpVariants}
+          initial="hidden"
+          whileInView="show"
           key={achievement.id}
           className={`flex justify-center items-center gap-5 relative mb-9 min-h-140
          ${achievement.id % 2 == 0 ? "" : "flex-row-reverse"}`}
@@ -24,7 +25,6 @@ export default function DesktopView() {
             className={`w-100 ${achievement.id % 2 == 0 ? "" : "text-right"} relative`}
           >
             <motion.div className="relative z-10">
-                
               <motion.h1
                 className="bg-[radial-gradient(circle_at_75%,#c89116,#c89116,#cfceaa)]
              text-transparent bg-clip-text text-title underline"
@@ -57,7 +57,6 @@ export default function DesktopView() {
     </motion.div>
   );
 }
-
 
 // "use client";
 // import { achievementsData } from "@/lib/achievementsData";

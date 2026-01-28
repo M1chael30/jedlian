@@ -26,7 +26,7 @@ export default function ContactUsDetails() {
           <motion.div className="flex items-center rounded-full p-2 bg-[#cfceaa] text-black text-description">
             <MdOutlineEmail />
           </motion.div>
-          <motion.p className="text-description">{contactsData.email}</motion.p>
+          <motion.p className="text-sm">{contactsData.email}</motion.p>
         </div>
       </div>
       <div className="space-y-2">

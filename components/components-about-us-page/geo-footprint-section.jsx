@@ -6,6 +6,7 @@ import image from "@/public/images/geo-footprint.png";
 import {
   containerVariants,
   fadeLeftVariants,
+  fadeRightSlowVariants,
   fadeRightVariants,
   fadeVariants,
 } from "@/lib/animations";
@@ -34,7 +35,7 @@ export default function GeoFootPrintSection() {
           className="flex flex-col justify-center items-center mx-5"
         >
           <motion.h1
-            variants={fadeRightVariants}
+            variants={fadeRightSlowVariants}
             initial="hidden"
             whileInView="show"
             className="text-title font-extrabold text-center md:text-left
@@ -45,13 +46,13 @@ export default function GeoFootPrintSection() {
             Our Geographic Footprint
           </motion.h1>
           <motion.div
-            variants={fadeRightVariants}
+            variants={fadeRightSlowVariants}
             initial="hidden"
             whileInView="show"
             className="h-1 w-full bg-[#c89116] my-3"
           />
           <motion.p
-            variants={fadeRightVariants}
+            variants={fadeRightSlowVariants}
             initial="hidden"
             whileInView="show"
             className="text-description text-center md:text-left p-5 "
