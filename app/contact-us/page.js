@@ -27,7 +27,6 @@ export default function ContactUs() {
           Contact Us
         </motion.h1>
         <motion.div className="h-1 my-4 w-full bg-[#c89116]" />
-
         <ContactUsSection />
         <FaqSection />
       </div>

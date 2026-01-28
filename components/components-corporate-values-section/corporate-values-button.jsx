@@ -15,7 +15,7 @@ export default function CorporateValuesButton({
                     w-30 h-30
                     flex justify-center items-center
                     hover:bg-yellow-400 duration-500
-                    ${customClassName} lg:w-40 lg:h-40
+                    ${customClassName} lg:w-37 lg:h-37
                     `}
       onClick={onClick}
     >
