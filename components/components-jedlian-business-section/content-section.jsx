@@ -25,7 +25,7 @@ export default function ContentSection({ item }) {
      variants={fadeRightVariants}
      initial="hidden"
      animate="show"
-     className="py-15 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
+     className="py-10 font-bold bg-[radial-gradient(circle_at_center,#c89116,#c89116,#cfceaa)] bg-clip-text text-transparent text-title"
     >
      {item?.title}
     </motion.h1>
