@@ -35,7 +35,7 @@ export default function DesktopView() {
                 {achievement.content}
               </motion.p>
             </motion.div>
-            <motion.div className="z-0 absolute -mx-20 -my-110  opacity-55 ">
+            <motion.div className="z-0 absolute -mx-30 -my-110  opacity-55 ">
               <Image
                 src={achievement.image}
                 alt="achievement"
@@ -49,7 +49,7 @@ export default function DesktopView() {
               src={achievement.image}
               alt="achievement"
               draggable="false"
-              className="w-60 md:w-130 md:h-130 select-none"
+              className={` w-60 md:w-130 md:h-130 select-none ${achievement.id % 2 == 0 ? "" : "mt-20"} `}
             />
           </motion.div>
         </motion.div>
