@@ -44,7 +44,7 @@ export default function ContentSection({ item }) {
       <CustomButton
        icon={<ArrowRight size={18} />}
        buttonText="Learn more about casa"
-       buttonHref="/casa"
+       buttonHref="https://casajedliana.com/"
       />
      </motion.div>
     )}

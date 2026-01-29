@@ -29,13 +29,13 @@ export default function CorporateGovernance() {
         />
       </motion.div>
       <MissionVision />
-      <div className="h-120 md:min-h-180 flex flex-col justify-center items-center">
+      <div className="h-120 md:min-h-180 flex flex-col justify-center items-center my-10">
         <div className={`flex flex-col items-center md:justify-center`} 
         >
           <motion.h1
             initial={{ opacity: 0, y:20 }}
             whileInView={{ opacity: 1, y: 0, transition: {duration:0.5} }}
-            className="text-title font-extrabold mt-5 text-center"
+            className="text-title font-extrabold text-center"
           >
             CORPORATE VALUES
           </motion.h1>
