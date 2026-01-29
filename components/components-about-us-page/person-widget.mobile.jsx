@@ -1,12 +1,11 @@
-import React from 'react'
+import { motion } from 'motion/react'
 import { Card, CardContent, CardTitle, CardHeader, CardDescription } from '../ui/card'
 import Image from 'next/image'
 
 export default function PersonWidgetMobile({image, name, position, content}) {
   return (
-    <Card className={"py-0 w-full sm:w-100 md:hidden grid"}>
-        <CardHeader className="justify-center py-5
-        bg-[radial-gradient(circle_at_75%,#c89116,#c89116,#cfceaa)] rounded-t-xl">
+    <Card className={"py-0 w-full sm:w-100 md:hidden grid border border-yellow-500"}>
+        <CardHeader className="justify-center py-5 rounded-t-xl ">
                   <Image src={image} width="50" height="50"  alt={"boss"} className="object-center shadow-xs rounded-full h-50 w-50 bg-red-100" />
         </CardHeader>
         <CardContent>
