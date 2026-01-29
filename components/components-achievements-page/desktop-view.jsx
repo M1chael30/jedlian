@@ -1,128 +1,48 @@
 "use client";
 import { achievementsData } from "@/lib/achievementsData";
 import { containerVariants, fadeUpVariants } from "@/lib/animations";
-import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function DesktopView() {
+
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="show"
-      className="md:block hidden w-full max-w-7xl"
-    >
-      {achievementsData.reverse().map((achievement) => (
-        <motion.div
-          variants={fadeUpVariants}
-          initial="hidden"
-          whileInView="show"
-          key={achievement.id}
-          className={`flex justify-center items-center gap-5 relative mb-9 min-h-140
-         ${achievement.id % 2 == 0 ? "" : "flex-row-reverse"}`}
-        >
-          <div
-            className={`w-100 ${achievement.id % 2 == 0 ? "" : "text-right"} relative`}
-          >
-            <motion.div className="relative z-10">
-              <motion.h1
-                className="bg-[radial-gradient(circle_at_75%,#c89116,#c89116,#cfceaa)]
-             text-transparent bg-clip-text text-title underline"
-              >
-                {achievement.year}
-              </motion.h1>
-              <motion.p className="text-description">
-                {achievement.content}
-              </motion.p>
-            </motion.div>
-            <motion.div className="z-0 absolute -mx-30 -my-110  opacity-55 ">
-              <Image
-                src={achievement.image}
-                alt="achievement"
-                draggable="false"
-                className=" grayscale md:hidden  lg:w-180 lg:h-180 select-none lg:block"
-              />
-            </motion.div>
-          </div>
-          <motion.div className="z-10">
-            <Image
-              src={achievement.image}
-              alt="achievement"
-              draggable="false"
-              className={` w-60 md:w-130 md:h-130 select-none ${achievement.id % 2 == 0 ? "" : "mt-20"} `}
-            />
-          </motion.div>
-        </motion.div>
-      ))}
-    </motion.div>
+    <div className=" w-full py-12 md:py-20">
+      <div className="relative ml-3">
+        {/* Timeline line */}
+        <div className="absolute top-4 bottom-0 left-0 border-l-2 bg-yellow-600" />
+
+        {achievementsData.reverse().map(
+          ({ description, period, title, image }, index) => (
+            <div className="relative pb-15 pl-8 last:pb-0 grid md:grid-cols-2 gap-5" key={index}>
+              {/* Timeline dot */}
+              <div className="absolute top-3 left-px h-4 w-4 -translate-x-1/2 rounded-full bg-yellow-400" />
+
+              {/* Content */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-2.5 justify-center md:justify-normal">
+                  <span className="text-3xl md:text-4xl font-semibold">{period}</span>
+                </div>
+                <div className="flex justify-center md:justify-normal md:block">
+
+                                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-45 w-65 block md:hidden"/>
+                </div>
+
+                <div className="flex flex-col justify-center py-3 items-center md:items-start">
+                  <h3 className="font-semibold text-xl tracking-[-0.01em]">
+                    {title}
+                  </h3>
+                <p className="text-pretty text-muted-foreground text-sm sm:text-base text-center md:text-left">
+                  {description}
+                </p>
+                </div>
+              </div>
+              <div className="flex justify-center items-center">
+                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-60 w-90 md:block hidden"/>
+              </div>
+            </div>
+          ),
+        )}
+      </div>
+    </div>
   );
 }
-
-// "use client";
-// import { achievementsData } from "@/lib/achievementsData";
-// import { containerVariants, fadeUpVariants } from "@/lib/animations";
-// import { motion } from "motion/react";
-// import Image from "next/image";
-
-// export default function DesktopView() {
-//   return (
-//     <motion.div
-//       variants={containerVariants}
-//       initial="hidden"
-//       whileInView="show"
-//       className="md:block hidden w-full max-w-7xl"
-//     >
-//       {achievementsData.reverse().map((achievement) => (
-//         <motion.div
-//           variants={fadeUpVariants}
-//           initial="hidden"
-//           whileInView="show"
-//           key={achievement.id}
-//           className={`flex justify-center items-center gap-5 relative mb-9 min-h-140
-//          ${achievement.id % 2 == 0 ? "" : "flex-row-reverse"}`}
-//         >
-//           <div
-//             className={`w-100 ${achievement.id % 2 == 0 ? "" : "text-right"} relative`}
-//           >
-//             <motion.div className="relative z-10">
-//               <motion.h1
-//                 className="bg-[radial-gradient(circle_at_75%,#c89116,#c89116,#cfceaa)]
-//              text-transparent bg-clip-text text-title underline"
-//               >
-//                 {achievement.year}
-//               </motion.h1>
-//               <motion.p className="text-description">
-//                 {achievement.content}
-//               </motion.p>
-//             </motion.div>
-//             <motion.div className="z-0 absolute -mx-20 -my-110  opacity-55 ">
-//               <Image
-//                 src={achievement.image}
-//                 alt="achievement"
-//                 draggable="false"
-//                 className=" grayscale md:hidden  lg:w-180 lg:h-180 select-none lg:block
-//               [mask-image:url('/images/scribble.png')]
-//               [mask-repeat:no-repeat]
-//               [mask-size:contain]
-//               [mask-position:center]
-//                 "
-//               />
-//             </motion.div>
-//           </div>
-//           <motion.div className="z-10">
-//             <Image
-//               src={achievement.image}
-//               alt="achievement"
-//               draggable="false"
-//               className="w-60 md:w-130 md:h-130 select-none bg-amber-500
-//               [mask-image:url('/images/scribble.png')]
-//               [mask-repeat:no-repeat]
-//               [mask-size:contain]
-//               [mask-position:center]"
-//             />
-//           </motion.div>
-//         </motion.div>
-//       ))}
-//     </motion.div>
-//   );
-// }
