@@ -1,19 +1,32 @@
 "use client";
+import { motion } from "motion/react";
 import { achievementsData } from "@/lib/achievementsData";
-import { containerVariants, fadeUpVariants } from "@/lib/animations";
+import { containerVariants, fadeUpVariants, fadeVariants } from "@/lib/animations";
 import Image from "next/image";
 
 export default function DesktopView() {
 
   return (
     <div className=" w-full py-12 md:py-20">
-      <div className="relative ml-3">
+      <motion.div
+      variants={containerVariants}
+                  initial="hidden"
+            whileInView="show"
+      className="relative ml-3">
         {/* Timeline line */}
-        <div className="absolute top-4 bottom-0 left-0 border-l-2 bg-yellow-600" />
+        <motion.div
+                    variants={fadeVariants}
+            initial="hidden"
+            animate="show"
+        className="absolute top-4 bottom-0 left-0 border-l-2 bg-yellow-600" />
 
         {achievementsData.reverse().map(
           ({ description, period, title, image }, index) => (
-            <div className="relative pb-15 pl-8 last:pb-0 grid md:grid-cols-2 gap-5" key={index}>
+            <motion.div
+            variants={fadeVariants}
+            initial="hidden"
+            whileInView="show"
+            className="relative pb-15 pl-8 last:pb-0 grid md:grid-cols-2 gap-5" key={index}>
               {/* Timeline dot */}
               <div className="absolute top-3 left-px h-4 w-4 -translate-x-1/2 rounded-full bg-yellow-400" />
 
@@ -24,7 +37,7 @@ export default function DesktopView() {
                 </div>
                 <div className="flex justify-center md:justify-normal md:block">
 
-                                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-45 w-65 block md:hidden"/>
+                                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-45 w-65 block md:hidden select-none" draggable="false"/>
                 </div>
 
                 <div className="flex flex-col justify-center py-3 items-center md:items-start">
@@ -36,13 +49,13 @@ export default function DesktopView() {
                 </p>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
-                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-60 w-90 md:block hidden"/>
+              <div className="md:flex justify-center items-center hidden">
+                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-60 w-90 select-none" draggable="false"/>
               </div>
-            </div>
+            </motion.div>
           ),
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }
