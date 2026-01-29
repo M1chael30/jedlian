@@ -32,8 +32,8 @@ export default function DesktopView() {
 
               {/* Content */}
               <div className="space-y-3">
-                <div className="flex items-center gap-2.5 justify-center md:justify-normal">
-                  <span className="text-3xl md:text-4xl font-semibold">{period}</span>
+                <div className="flex items-center gap-2.5 justify-center md:justify-normal bg-[radial-gradient(circle_at_50%,#c89116,#c89116,#cfceaa)] text-transparent bg-clip-text">
+                  <span className="text-3xl md:text-5xl font-semibold">{period}</span>
                 </div>
                 <div className="flex justify-center md:justify-normal md:block">
 
@@ -41,7 +41,7 @@ export default function DesktopView() {
                 </div>
 
                 <div className="flex flex-col justify-center py-3 items-center md:items-start">
-                  <h3 className="font-semibold text-xl tracking-[-0.01em]">
+                  <h3 className="font-semibold text-lg md:text-xl tracking-[-0.01em]">
                     {title}
                   </h3>
                 <p className="text-pretty text-muted-foreground text-sm sm:text-base text-center md:text-left">
