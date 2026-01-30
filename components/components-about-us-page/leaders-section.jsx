@@ -14,7 +14,7 @@ export default function LeadersSection() {
       {companyLeadersData.map((person, index) => (
         <PersonWidget
           key={index}
-          image={person.image}
+          image={person.mobileImage}
           name={person.name}
           position={person.position}
           content={person.textContent}
@@ -25,7 +25,7 @@ export default function LeadersSection() {
       {companyLeadersData.map((person, index) => (
         <PersonWidgetMobile
           key={index}
-          image={person.image}
+          image={person.mobileImage}
           name={person.name}
           position={person.position}
           content={person.textContent}
