@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 export default function PersonWidgetMobile({image, name, position, content}) {
   return (
-    <Card className={"py-0 w-full sm:w-100 md:hidden grid border border-yellow-500"}>
-        <CardHeader className="justify-center py-5 rounded-t-xl ">
-                  <Image src={image} width="50" height="50"  alt={"boss"} className="object-center shadow-xs rounded-full h-50 w-50 bg-red-100" />
+    <Card className={"py-0 w-full sm:w-100 md:hidden grid border border-yellow-600"}>
+        <CardHeader className="justify-center py-0 px-0 rounded-t-xl ">
+                  <Image src={image} width="50" height="50"  alt={"boss"} className=" shadow-xs w-200 h-100 border rounded-t-xl" />
         </CardHeader>
         <CardContent>
             <CardTitle className={"text-center text-xl"}>
