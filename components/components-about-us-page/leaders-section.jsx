@@ -14,7 +14,7 @@ export default function LeadersSection() {
       {companyLeadersData.map((person, index) => (
         <PersonWidget
           key={index}
-          image={person.mobileImage}
+          image={person.image}
           name={person.name}
           position={person.position}
           content={person.textContent}
