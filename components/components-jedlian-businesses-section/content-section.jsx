@@ -1,8 +1,4 @@
-import {
- fadeRightVariants,
- imageVariants,
- sectionVariants,
-} from "@/lib/animations";
+import { fadeRightVariants, sectionVariants } from "@/lib/animations";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";

@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 export default function BottomSection({ items }) {
  let content;
 
+ // conditional render of content.
  if (items?.title === "Jedlian Drugstore") {
   content = (
    <motion.div variants={fadeVariants} initial="hidden" whileInView="show">
@@ -112,7 +113,7 @@ export default function BottomSection({ items }) {
     {items?.titleTwo}
    </motion.h1>
 
-   {/* content */}
+   {/* content either carousel or list */}
    {content}
   </motion.div>
  );

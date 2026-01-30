@@ -2,7 +2,7 @@
 
 import Navlink from "./nav-link";
 import Link from "next/link";
-import { navLinks, ourBusinesses, ourStory } from "@/lib/data";
+import { navLinks, ourStory } from "@/lib/data";
 import { jedlianBusinessesData } from "@/lib/homePageData";
 import { usePathname } from "next/navigation";
 import MobileNavLinks from "./mobile-nav-links";
@@ -14,6 +14,7 @@ export default function Nav() {
  return (
   <header className="sticky top-0 z-50 bg-black">
    <div className="flex h-16 shrink-0 items-center px-4 mx-auto max-w-7xl w-full">
+    {/* logo */}
     <Link href="/">
      <img
       src="images/HOLDINGS-LOGO2.png"

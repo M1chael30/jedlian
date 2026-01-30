@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function CodeOfConductSquare() {
  return (
   <div className="bg-yellow-200 rounded-3xl p-5 w-full md:w-1/2 relative hidden md:block">
