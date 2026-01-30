@@ -3,7 +3,6 @@ import CustomButton from "../ui/custom-button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import {
- itemVariants,
  fadeVariants,
  sectionVariants,
  fadeRightVariants,
@@ -91,7 +90,7 @@ export default function ContentSection({ item }) {
      {item?.descriptionFour}
     </motion.p>
    </div>
-   {/* icon */}
+   {/* social icon */}
    <motion.div
     variants={fadeVariants}
     initial="hidden"

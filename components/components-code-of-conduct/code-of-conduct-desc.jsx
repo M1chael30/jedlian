@@ -1,4 +1,3 @@
-import React from "react";
 import COCReadHere from "./code-of-conduct-read-here";
 
 export default function CodeOfConductDesc() {
