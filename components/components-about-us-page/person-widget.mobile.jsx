@@ -5,8 +5,8 @@ import Image from 'next/image'
 export default function PersonWidgetMobile({image, name, position, content}) {
   return (
     <Card className={"py-0 w-full sm:w-100 md:hidden grid border border-yellow-600"}>
-        <CardHeader className="justify-center py-0 px-0 rounded-t-xl ">
-                  <Image src={image} width="50" height="50"  alt={"boss"} className=" shadow-xs w-200 h-100 border rounded-t-xl" />
+        <CardHeader className="justify-center pt-5 rounded-t-xl ">
+                  <Image src={image}  alt={"boss"} className="rounded-full shadow-xs w-50 h-50 border border-yellow-600" />
         </CardHeader>
         <CardContent>
             <CardTitle className={"text-center text-xl"}>
