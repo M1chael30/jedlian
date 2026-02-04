@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import HomeStatsButton from "./components-home-stats-section/home-stats-button";
-import HomeStatsCards from "./components-home-stats-section/home-stats-cards";
+import HomeStatsButton from "./home-stats-button";
+import HomeStatsCards from "./home-stats-cards";
 import BgCasa from "@/public/images/bg-casa-jedliana.png";
-import { HomeStatsCardMobile } from "./components-home-stats-section/home-stats-card-mobile";
+import { HomeStatsCardMobile } from "./home-stats-card-mobile";
 
 export default function HomeStatsSection() {
  return (
