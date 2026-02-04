@@ -3,7 +3,7 @@
 import Image from "next/image";
 import HomePageImage from "../public/images/home-page-image.png";
 import JedlianBusinessesSection from "@/components/components-jedlian-businesses-section/jedlian-businesses-section";
-import HomeStatsSection from "@/components/home-stats-section";
+import HomeStatsSection from "@/components/components-home-stats-section/home-stats-section";
 import CorporateResponsibilitySection from "@/components/components-corporate-responsibility-section/corporate-responsibility-section";
 
 import { motion } from "motion/react";

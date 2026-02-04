@@ -25,7 +25,7 @@ export default function ContentSection({ item }) {
     </motion.div>
 
     {/* Content */}
-    <div className="w-full md:w-1/2 space-y-4">
+    <div className="w-full md:w-1/2 space-y-4 h-70">
      <motion.h1
       variants={fadeRightVariants}
       className="text-title font-bold max-w-[15ch]"
