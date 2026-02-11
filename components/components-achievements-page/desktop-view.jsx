@@ -9,24 +9,24 @@ export default function DesktopView() {
   return (
     <div className=" w-full py-12 md:py-20">
       <motion.div
-      variants={containerVariants}
-                  initial="hidden"
-            whileInView="show"
-      className="relative ml-3">
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        className="relative ml-3">
         {/* Timeline line */}
         <motion.div
-                    variants={fadeVariants}
-            initial="hidden"
-            animate="show"
-        className="absolute top-4 bottom-0 left-0 border-l-2 bg-yellow-600" />
+          variants={fadeVariants}
+          initial="hidden"
+          animate="show"
+          className="absolute top-4 bottom-0 left-0 border-l-2 bg-yellow-600" />
 
         {achievementsData.reverse().map(
           ({ description, period, title, image }, index) => (
             <motion.div
-            variants={fadeVariants}
-            initial="hidden"
-            whileInView="show"
-            className="relative pb-15 pl-8 last:pb-0 grid md:grid-cols-2 gap-5" key={index}>
+              variants={fadeVariants}
+              initial="hidden"
+              whileInView="show"
+              className="relative pb-15 pl-8 last:pb-0 grid md:grid-cols-2 gap-5" key={index}>
               {/* Timeline dot */}
               <div className="absolute top-3 left-px h-4 w-4 -translate-x-1/2 rounded-full bg-yellow-400" />
 
@@ -37,20 +37,24 @@ export default function DesktopView() {
                 </div>
                 <div className="flex justify-center md:justify-normal md:block">
 
-                                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-45 w-65 block md:hidden select-none" draggable="false"/>
+                  <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-45 w-65 block md:hidden select-none" draggable="false" />
                 </div>
 
                 <div className="flex flex-col justify-center py-3 items-center md:items-start">
                   <h3 className="font-semibold text-lg md:text-xl tracking-[-0.01em]">
                     {title}
                   </h3>
-                <p className="text-pretty text-muted-foreground text-sm sm:text-base text-center md:text-left">
-                  {description}
-                </p>
+                  {
+                    description.map((desc, index) => (
+                      <p key={index} className="text-pretty text-muted-foreground text-sm sm:text-base text-center md:text-left mb-3">
+                        {desc}
+                      </p>
+                    ))
+                  }
                 </div>
               </div>
               <div className="md:flex justify-center items-center hidden">
-                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-60 w-90 select-none" draggable="false"/>
+                <Image src={image} alt="nakamit mo" className="rounded-xl border border-yellow-400 h-60 w-90 select-none" draggable="false" />
               </div>
             </motion.div>
           ),
